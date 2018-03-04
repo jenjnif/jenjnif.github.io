@@ -83,15 +83,15 @@ header {
 	padding: 20px 0 30px 0;
 }
 .blog img {
-	width: 350px;
+	width: 380px;
 	float: left;
 	padding-right: 30px;
 }
 .blog-text {
 	height: 350px;
-	text-align: left;
 	margin-top: 40px;
-	padding: 20px 20px 0 0;
+    width: 350px;
+    float: right;
 }
 .blog a {
 	padding: 0;
