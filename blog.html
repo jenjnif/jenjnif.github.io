@@ -1,27 +1,15 @@
-<!-- Blog list page -->
-<!DOCTYPE HTML>
-<head>
-	<link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-      <h1>Jen Jones</h1>
-          <nav class="navigation">
-          <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="https://github.com/jenjnif">My GitHub</a></li>
-            <li><a href="https://jenjnif.github.io/blog.html">Blog</a></li>
-          </ul>
-      </nav>
-    </header>
-	<div class="dev-blog">
-	  <h2>Development Blog</h2>
-	</div>
-	<div class="blog-list">
-		<ul class="posts">
-	    {% for post in site.posts %}
-	      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-	    {% endfor %}
-	  	</ul>
-	</div>
-</body>
+---
+layout: default
+title: Development Blog
+---
+
+<div class="dev-blog">
+  <h2>Development Blog</h2>
+</div>
+<div class="blog-list">
+	<ul class="posts">
+    {% for post in site.posts %}
+      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  	</ul>
+</div>

@@ -1,5 +1,11 @@
 /*Main CSS for Jen Jones' site*/
-
+/**
+*
+*
+Site wide
+*
+*
+**/
 html, body, h1, h2, h3, h4, p, div, ul, ol, li {
 	padding: 0;
 	border: 0;
@@ -104,6 +110,13 @@ header {
 	text-align: center;
 	padding: 20px 0 20px 0;
 }
+/**
+*
+*
+Posts
+*
+*
+**/
 .post {
 	width: 800px;
 	margin: 0 auto;
