@@ -2,8 +2,12 @@
 layout: default
 ---
 
+<div class="blog-header">
+			{% for post in site.posts %}
+	<h3 class="title">{{ post.title }}</h3>
+<div>
+   
 
 <div id="post">
-<h3>{{ post.title }}</h3>
 {{ content }}
 </div>
