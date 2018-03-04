@@ -1,5 +1,7 @@
 <!-- Jennifer Jones site 2018 -->
-
+---
+title: Home Page
+---
 
 <head>
    <link rel="stylesheet" href="styles.css">
@@ -17,11 +19,26 @@
 		  		</ul>
 			</nav>
     </header>
-
-	
 	<div class="tagline">
 		<h2>I am a junior developer digging into new skills and learning each day. I am currently developing my python skills and making websites using JavaScript and html/css and playing with my new toy - a Raspberry Pi. Why I am not on my computer I love to spending time in the outdoors climbing, surrounded by mountains and wildlife.</h2>
 	</div>
+	<div class="blog">
+		<img src="images/ramsey.jpg">
+		<div class="blog-text">
+			<ul>
+			  {% for post in site.posts %}
+			    <li>
+			      <a href="{{ post.url }}">{{ post.title }}</a>
+			      {{ post.excerpt }}
+			    </li>
+			  {% endfor %}
+			</ul>
+			<p>Today is the day I solder the header onto my Raspberry Pi and set it up and run my first python programme on it. I am going to set the alarm for 6am! <strong><a href="https://jenjnif.github.io/2018/03/04/raspberry_pi_adventure_day_blog.html">Click here to read more.</a></strong></p>
+		</div>
+	</div>
+
+	
+
 	<div class="blog">
 		<img src="images/ramsey.jpg">
 		<div class="blog-text">
