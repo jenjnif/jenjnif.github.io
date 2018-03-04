@@ -11,6 +11,7 @@ title: Home Page
 		<img src="images/ramsey.jpg">
 		<div class="blog-text">
 			<ul>
+			  {% for post in site.posts %}
 			    <li>
 			      <a href="{{ post.url }}">{{ post.title }}</a>
 			      {{ post.excerpt }}
@@ -23,13 +24,6 @@ title: Home Page
 
 	
 
-<!-- 	<div class="blog">
-		<img src="images/ramsey.jpg">
-		<div class="blog-text">
-			<h3>Last week I got a gift in the post. I love getting post, regardless of how underwhelming the content but this was extremily exciting. I opened my jiffy to find a <em>Raspberry Pi!</em></h3>
-			<p>Today is the day I solder the header onto my Raspberry Pi and set it up and run my first python programme on it. I am going to set the alarm for 6am! <strong><a href="https://jenjnif.github.io/2018/03/04/raspberry_pi_adventure_day_blog.html">Click here to read more.</a></strong></p>
-		</div>
-	</div> -->
 	<section class="courses">
 		<div class="courses-current">
 			<h4>Current courses</h4>
