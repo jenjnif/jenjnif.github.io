@@ -10,14 +10,12 @@ title: Home Page
 	<div class="blog">
 		<img src="images/ramsey.jpg">
 		<div class="blog-text">
-			<ul>
-			  {% for post in site.posts %}
-			    <li>
-			      {{ post.excerpt }}
-			      <a href="{{ post.url }}">{{ post.title }}</a>
-			    </li>
+			{% for post in site.posts %}
+			    <div>
+    				<h3 class="title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
+			      <article>{{ post.excerpt }}</article>
 			  {% endfor %}
-			</ul>
+			</div>
 		</div>
 	</div>
 	<section class="courses">
