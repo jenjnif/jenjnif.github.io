@@ -13,12 +13,11 @@ title: Home Page
 			<ul>
 			  {% for post in site.posts %}
 			    <li>
-			      <a href="{{ post.url }}">{{ post.excerpt }}</a>
-			      
+			      <a href="{{ post.url }}">{{ post.title }}</a>
+			      {{ post.excerpt }}
 			    </li>
 			  {% endfor %}
 			</ul>
-			<p>Today is the day I solder the header onto my Raspberry Pi and set it up and run my first python programme on it. I am going to set the alarm for 6am!</p>
 		</div>
 	</div>
 	<section class="courses">
