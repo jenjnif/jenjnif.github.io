@@ -47,7 +47,10 @@ a {
 a:hover {
 	color: #EE1133;
 }
-
+a:active {
+	color: #EE1133;
+	font-style: bold;
+}
 ul
 {
   width: 90%;
