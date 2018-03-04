@@ -13,8 +13,9 @@ title: Home Page
 			{% for post in site.posts %}
 			    <div>
     				<h3 class="title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
-			      	<article>{{ post.excerpt }}</article>
-			  	<p class="read-more"><a href="{{ post.url }}">Click here to read more</a></p>
+			      	<article>{{ post.excerpt }}
+			      	<p class="read-more"><a href="{{ post.url }}">Click here to read more</a></p></article>
+			  	
 			  {% endfor %}
 			</div>
 		</div>
