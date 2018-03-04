@@ -1,0 +1,20 @@
+<!-- Blog list page -->
+<!DOCTYPE HTML>
+<head>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<header>
+		<h1>Jen Jones</h1>
+	</header>
+	<div class="dev-blog">
+	  <h2>Development Blog</h2>
+	</div>
+	<div class="blog-list">
+		<ul class="posts">
+	    {% for post in site.posts %}
+	      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+	    {% endfor %}
+	  	</ul>
+	</div>
+</body>
