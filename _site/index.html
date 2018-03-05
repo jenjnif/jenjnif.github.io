@@ -1,22 +1,39 @@
----
-layout: default
-title: Home Page
----
-	
+<!DOCTYPE html>
+<head>
+   <link rel="stylesheet" href="/styles.css">
+   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+   <title>Home Page</title>
 
-	<div class="tagline">
+</head>
+<body>
+    <header>
+      <h1>Jen Jones</h1>
+          <nav class="navigation">
+          <ul>
+            <li><a id="home-link" href="/">Home</a></li>
+            <li><a href="https://github.com/jenjnif">My GitHub</a></li>
+            <li><a id="blog-link" href="/blog.html">Blog</a></li>
+          </ul>
+      </nav>
+    </header>
+  
+  	<div class="tagline">
 		<h2>I am a junior developer digging into new skills and learning each day. I am currently developing my python skills and making websites using JavaScript and html/css and playing with my new toy - a Raspberry Pi. While I am not on my computer I love spending time in the outdoors climbing, surrounded by mountains and wildlife.</h2>
 	</div>
 	<div class="blog">
 		<img src="images/ramsey.jpg">
 		<div class="blog-text">
-			{% for post in site.posts %}
+			
 			    <div>
-    				<h3 class="title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
-			      	<article>{{ post.excerpt }}
-			      	<p class="read-more"><a href="{{ post.url }}">Click here to read more</a></p></article>
+    				<h3 class="title"><a href="/2018/03/04/raspberry_pi_adventure_day_blog.html">Raspberry Pi adventure day 1</a></h3>
+			      	<article><p><strong>Last week I got a gift in the post. I love getting post, regardless of how underwhelming the content but this was extremily exciting. I opened this jiffy to find a Raspberry Pi!</strong></p>
+
+<p>Today is the day I solder the header onto my Raspberry Pi and set it up and run my first python programme on it.</p>
+
+
+			      	<p class="read-more"><a href="/2018/03/04/raspberry_pi_adventure_day_blog.html">Click here to read more</a></p></article>
 			  	
-			  {% endfor %}
+			  
 			</div>
 		</div>
 	</div>
@@ -64,3 +81,22 @@ title: Home Page
 	<script>
 		document.getElementById('home-link').style.fontWeight='bold';
 	</script>
+
+  
+  <div class="footer">
+    <div class="contact">
+      <p>
+        Jen Jones<br />
+      </p>
+    </div>
+    <div class="contact">
+      <p>
+        <a href="https://github.com/jenjnif">github.com/jenjnif</a><br />
+      </p>
+    </div>
+  </div>
+</div>
+
+
+</body>
+</html>

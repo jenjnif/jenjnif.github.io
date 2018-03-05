@@ -9,5 +9,3 @@ excerpt_separator: <!--more-->
 
 Today is the day I solder the header onto my Raspberry Pi and set it up and run my first python programme on it.  
 <!--more-->
-
-This is some more text to see if I can get a new paragraph going!
