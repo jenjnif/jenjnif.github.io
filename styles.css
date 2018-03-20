@@ -42,7 +42,8 @@ p {
 }
 a {
 	text-decoration: none;
-	color: black;
+	color: grey;
+  	cursor: pointer;
 }
 a:hover {
 	color: #EE1133;
@@ -51,20 +52,13 @@ a:active {
 	color: #EE1133;
 	font-style: bold;
 }
-ul
-{
+ul {
   width: 90%;
   margin: 0 auto;
 }
 
-ul li
-{
+ul li {
   display: inline-block;
-}
-
-a {
-  padding: 20px;
-  cursor: pointer;
 }
 header {
 	padding: 10px 0 20px 0;
@@ -81,6 +75,9 @@ header {
 	margin: 0 auto;
 	text-align: center;
 	padding: 20px 0 30px 0;
+}
+.navigation a {
+	padding: 20px;
 }
 .blog img {
 	width: 380px;
