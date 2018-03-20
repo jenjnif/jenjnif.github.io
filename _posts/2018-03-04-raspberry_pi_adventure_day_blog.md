@@ -129,7 +129,7 @@ The right hand root shows it belongs to the group root and the left hand route s
 	
 The dash - before the rw means that this is a normal file that contains any type of data. A directory, for example, would have a d instead of a dash.
 	
-Each permission, user, group and global is made up of three characters. The rwx are the permissions for the user. The rw means that root (the user who the file belongs to) can read and write to the file. The x means it is executable by the owner (root). The next r - - means the group has only read permissions and the final r - - shows the global permissions are also read only.
+Each permission, user, group and global is made up of three characters. The rwx are the permissions for the user. The rw means that root (the user who the file belongs to) can read and write to the file. The x means it is executable by the owner (root). The next r- - means the group has only read permissions and the final r- - shows the global permissions are also read only.
 
 It worked, the image appeared and my site was up! 
 
