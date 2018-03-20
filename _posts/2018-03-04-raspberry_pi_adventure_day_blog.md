@@ -133,7 +133,7 @@ The rwxr are the permissions for the user. The rw means that root (the user who 
 
 It worked, the image appeared and my site was up! 
 
-During this project I also installed Links - a text-based browser - to view my site. I found it useful to view the site like this as it shows why it is important to use the correct HTML tags ensuring that it renders properly when using a text based browser. This is good for accessibility issues, screen readers and so on - a very important consideration when building any kind of site. I will be exploring this more whilst building a new website for a client to ensure that it is accessible for anyone wishing to visit.
+During this project I also installed Lynx - a text-based browser - to view my site. I found it useful to view the site like this as it shows why it is important to use the correct HTML tags ensuring that it renders properly when using a text based browser. This is good for accessibility issues, screen readers and so on - a very important consideration when building any kind of site. I will be exploring this more whilst building a new website for a client to ensure that it is accessible for anyone wishing to visit.
 
 I closed the connection to my Raspberry Pi and started the challenge of writing it all up for my own learning but also with others who might be trying to do a similar thing. I really enjoyed playing around with my RP and found it hugely beneficial to solidify my knowledge by writing up about it afterwards. Once step closer to my world famous robot.
 
