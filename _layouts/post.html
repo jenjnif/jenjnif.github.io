@@ -5,9 +5,9 @@ layout: default
 
 <div id="post">
 <div class="blog-header">
-			{% for post in site.posts limit: 1 %}
+<h2>{{ page.title }}</h2>
 </div>
 <h2 class="blog-title">{{ post.title }}</h2>
-{% endfor %}
+
 {{ content }}
 </div>

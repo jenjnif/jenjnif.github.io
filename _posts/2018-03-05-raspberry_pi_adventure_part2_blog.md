@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Raspberry Pi adventure day part 2 - creating and transferring my website
+title: Raspberry Pi adventure day part 2 - creating & transferring my site
 excerpt_separator: <!--more-->
 ---
 
