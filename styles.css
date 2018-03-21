@@ -38,7 +38,8 @@ h4 {
 }
 p {
 	font-size: 20px;
-	margin: 16px 0;	
+	margin: 16px 0;
+	font-weight: 300;
 }
 a {
 	text-decoration: none;
@@ -56,19 +57,25 @@ ul {
   width: 90%;
   margin: 0 auto;
 }
-
 ul li {
   display: inline-block;
+}
+.courses :last-child {
+	margin-bottom: 0;
 }
 header {
 	padding: 10px 0 20px 0;
 }
-.tagline, .blog, .courses-current, .courses-completed, 
-.skills, .dev-blog, .blog-list, .blog-title {
+.tagline, .blog, .courses-current, .courses-completed, .skills, .dev-blog, .blog-list, .blog-title {
 	width: 800px;
 	margin: 0 auto 20px auto;
 	padding-bottom: 20px;
 	border-bottom: 1px solid #555555;
+}
+.course {
+	padding-bottom: 40px;
+	font-size: 20px;
+	font-weight: 300;
 }
 .navigation {
 	width: 800px;
@@ -100,8 +107,8 @@ header {
 .blog p {
 	line-height: 30px;
 }
-.courses-current li, .courses-completed li {
-	padding-bottom: 20px;
+.course-summary {
+
 }
 .skills li{
 	font-weight: bold;
@@ -129,6 +136,9 @@ Posts
 }
 .posts {
 	list-style: none;
+	padding-bottom: 20px;
+}
+.posts li {
 	padding-bottom: 20px;
 }
 

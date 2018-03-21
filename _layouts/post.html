@@ -5,7 +5,7 @@ layout: default
 
 <div id="post">
 <div class="blog-header">
-			{% for post in site.posts %}
+			{% for post in site.posts limit: 1 %}
 </div>
 <h2 class="blog-title">{{ post.title }}</h2>
 {% endfor %}
