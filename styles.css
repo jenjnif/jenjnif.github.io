@@ -60,22 +60,14 @@ ul {
 ul li {
   display: inline-block;
 }
-.courses :last-child {
-	margin-bottom: 0;
-}
 header {
 	padding: 10px 0 20px 0;
 }
 .tagline, .blog, .courses-current, .courses-completed, .skills, .dev-blog, .blog-list, .blog-title {
 	width: 800px;
-	margin: 0 auto 20px auto;
+	margin: 0 auto 40px auto;
 	padding-bottom: 20px;
 	border-bottom: 1px solid #555555;
-}
-.course {
-	padding-bottom: 40px;
-	font-size: 20px;
-	font-weight: 300;
 }
 .navigation {
 	width: 800px;
@@ -87,16 +79,9 @@ header {
 	padding: 20px;
 }
 .blog img {
-	width: 380px;
+	width: 270px;
 	float: left;
 	padding-right: 30px;
-}
-.blog-text {
-	height: 350px;
-	margin-top: 40px;
-}
-.blog {
-	padding-bottom: 80px;
 }
 .blog a {
 	padding: 0;
@@ -106,6 +91,19 @@ header {
 }
 .blog p {
 	line-height: 30px;
+}
+article {
+	padding-bottom: 30px;
+	min-height: 200px;
+}
+/*article:last-child {
+	padding-bottom: 0px;
+	margin-bottom: 0px;
+}*/
+.course {
+	font-size: 20px;
+	font-weight: 300;
+	padding-bottom: 30px
 }
 .course-summary {
 
@@ -120,7 +118,7 @@ header {
 .footer {
 	background-color: #999999;
 	text-align: center;
-	padding: 20px 0 20px 0;
+	/*padding: 20px 0 20px 0;*/
 }
 /**
 *
@@ -132,15 +130,10 @@ Posts
 #post {
 	width: 800px;
 	margin: 0 auto 20px auto;
-	padding-bottom: 100px;
-}
-.posts {
-	list-style: none;
-	padding-bottom: 20px;
+	/*padding-bottom: 100px;*/
 }
 .posts li {
 	padding-bottom: 20px;
 }
-
 
 

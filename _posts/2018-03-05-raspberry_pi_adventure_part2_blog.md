@@ -10,16 +10,16 @@ excerpt_separator: <!--more-->
 In part 2 I describe how I used Jekyll to produce HTML and CSS files from my GitHub Pages markdown files and then transferred the files onto the Raspberry Pi to view my website.  
 <!--more-->
 <br>
-<p align="center"><img src="/images/RP_closeup.jpeg"
+<p align="center"><img src="/images/1-2-3-RP/RP-closeup.jpeg"
      alt="Raspberry Pi" width="300px" /></p>
 <br>
-**Preparing my site with Jekyll**
+### Preparing my site with Jekyll
 
 The site I wanted to use for this project was built using <a href="https://pages.github.com/">GitHub Pages</a> and is made up of HTML, CSS and markdown language. GitHub Pages uses Jekyll to automatically convert any markdown on into HTML and without this Jekyll conversion the site would not display properly. So I had two choices with my files: 1 - I could convert the markdown to HTML myself; or 2 - Use Jekyll directly to do what it does on GitHub Pages i.e. create HTML pages from any markdown language. I chose option 2.
 
 When I downloaded <a href="https://jekyllrb.com/docs/installation/"> Jekyll</a> I ignored any additions and initially made the mistake of doing all four steps from the <a href="https://jekyllrb.com/docs/quickstart/">quick-start guide</a> not realising that this created a whole new template website for me. All I actually wanted was to use Jekyll to produce the files for my site with the markdown language all converted to HTML so I deleted the template site.
 
-<p align="center"><img src="/images/Jekyll_QS_guide.png"
+<p align="center"><img src="/images/1-2-3-RP/Jekyll-QS-guide.png"
      alt="Jekyll quick-start guide" width="600px" /></p>
 
 There are a couple of ways to create these files, both of which I tried. First, navigate to the folder containing my GitHub Pages files on my Mac then fire up a Jekyll server:
@@ -35,7 +35,7 @@ As I didn't actually need a Jekyll server for the purpose of transferring the si
 This uses Jekyll to build the 'site' folder without the need to start up a server. Either way, a 'site' folder is created with all the files converted to HTML and CSS ready for me to transfer over to my RP.
 
 <br>
-**Transferring my site to the Raspberry Pi**
+### Transferring my site to the Raspberry Pi
 
 My initial attempt to make a zip file of my site from the command line didn't seem to contain any files within folders, such as my image files within the images folder:
 
@@ -65,7 +65,7 @@ I navigated to the directory containing the index.html file, created when Apache
 	# Then unzip the 'sites' folder transferred earlier making sure to use the path to the home directory (~/) 		
 	pi@raspberrypi:/var/www/html $ sudo unzip ~/site.zip
 
-<p align="center"><img src="/images/mysite.png"
+<p align="center"><img src="/images/1-2-3-RP/mysite.png"
      alt="Image of Jen Jones' site" width="600px" /></p>
 
 After checking that all my files were there, including the blogs and the images, I typed http://raspberrypi/ into my browser (you can also use the IP address for your Raspberry Pi) and there was my website - but no ramsey.jpg image!! After a little help and investigation I realised that the image was not showing up because the permissions of the image were set to make it available only as a read or write file for root.

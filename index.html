@@ -8,20 +8,21 @@ title: Home Page
 		<h2>I am a junior developer digging into new skills and learning each day. I am currently developing my python skills and making websites using JavaScript and html/css and playing with my new toy - a Raspberry Pi. While I am not on my computer I love spending time in the outdoors climbing, surrounded by mountains and wildlife.</h2>
 	</div>
 	<div class="blog">
-		<img src="images/ramsey.jpg">
+		<img src="images/contact-form.png">
 		<div class="blog-text">
-			{% for post in site.posts limit: 1 %}
+			{% for post in site.posts limit: 3 %}
 			    <div>
+
     				<h3 class="title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
 			      	<article>{{ post.excerpt }}
 			      	<p class="read-more"><a href="{{ post.url }}">Click here to read more</a></p></article>
-			  	
+			  	</div>
 			  {% endfor %}
-			</div>
+				</div>
 		</div>
 	</div>
 	<section class="courses">
-		<div class="courses-completed">
+		<div class="courses-current">
 			<h4>Current courses</h4>
 				<div class="course">
 					<h3><a href="https://www.codeschool.com/courses/front-end-formations">Front-End Formations</a>, HTML5 and CSS3, Codeschool (online)
