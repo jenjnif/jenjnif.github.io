@@ -44,14 +44,6 @@ I installed <a href="https://www.raspberrypi.org/documentation/remote-access/web
 	
 	pi@raspberrypi:~ $ sudo apt-get update
 	
-Running this update command fetches packages from their locations and updates them if there is a newer version. When I tried to install Apache again it ran fine. Installing Apache creates an html folder, 'index.html', in the /var/www/html folder of the RP which you can delete, edit or replace and I wanted to send a file to my RP to replace this website holder. To securely transfer files between my local host (my Mac) and a remote host (my RP) I <a href="https://www.raspberrypi.org/documentation/remote-access/ssh/scp.md">used Secure copy protocol (SCP) which is based on SSH protocol (requires an SSH server)</a>.
-
-SSH is pre-installed on the RP but needs to be enabled:
-	
-	pi@raspberrypi:~ $ sudo systemctl enable ssh
-
-Then to start SSH running:
-
-	pi@raspberrypi:~ $ sudo systemctl start ssh
+Running this update command fetches packages from their locations and updates them if there is a newer version. When I tried to install Apache again it ran fine. Installing Apache creates an html folder, 'index.html', in the /var/www/html folder of the RP which you can delete, edit or replace and I wanted to send a file to my RP to replace this website holder. 
 
 In part 2 I will write about how I used Jekyll to produce HTML and CSS files from my GitHub Pages markdown files and then transferred the files onto the Raspberry Pi to view my website.

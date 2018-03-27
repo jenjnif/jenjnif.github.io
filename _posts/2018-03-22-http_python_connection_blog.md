@@ -4,38 +4,52 @@ title: Creating a website contact page part 1 - HTTP requests
 excerpt_separator: <!--more-->
 ---
 
-**I have built a content form, which is great, except that when it is filled in and the submit button is pressed the information entered doesn't actually go anywhere and the user is just left with an http error message.**
+**I recently built a content form which looks pretty good. The only problem is that when the submit button is pressed the information entered doesn't actually go anywhere and the user is left with an error message.**
 
-To fix this I thought I could send the input to a server and then figure out how to use python to send it in an email to me. This proved harder than I initially thought.
+The end goal for my contact form is to have the information stored and sent to me in the form of an email. To achieve this I knew I would have to send a request to the server and then use server side Python to email me the data but I wasn't entirely sure where to start.
+
 <!--more-->
-<br>
+
 <p align="center"><img src="/images/4-http/contactpage-and-error.png"
      alt="content form screenshot" width="90%" /></p>
-<br>
+
 ### Breaking it down
 
-So I broke the problem down into steps. Firstly, what does it mean to send a request to the server? Well it involves HTTP requests; so, how do http requests work?
+So, I broke the problem down into steps. Firstly, what does it mean to send a request to the server? Well, it involves HTTP, which enables communications between clients and servers - here's how http requests work.
 
-If we look at the error message in more detail:
+<p align="center"><img src="/images/4-http/http-diagram-annotated.JPG"
+     alt="http diagram" width="90%" /></p>
 
-<p align="center"><img src="/images/4-http/http-error.png"
-     alt="content form screenshot" width="60%" /></p>
+There are a few different types of HTTP requests, GET and POST being the most common. The above diagram is a simplified version of how HTTP GET requests aquire data from the server and sends it back to the browser/client.
 
-> **"**The request could not be satisfied.
+1. A client (browser) submits an HTTP request for a resource (data) to a server (GET/ HTTP/1.1) over a TCP connection
 
-> This distribution is not configured to allow the HTTP request method that was used for this request. The distribution supports only cachable requests.**"**
+2. The server returns a response to the client
+
+3. The response contains status information about the request and may contain the requested content. Assuming the data request is successful it responds with a message to say "I understand, here is your requested data" (HTTP/1.1 200 OK) along with the requested data. 
+
+For more information on different types of http requests and erros this <a href="https://www.codecademy.com/articles/http-requests" title="http article codeacademy">article</a> from codeacademy.com is a great introduction.
 
 <br>
-This bascialy means that I have not configured the distribution () to POST requests (the request method used when clicking on the 'submit' button). The distribution will only support cachable requests i.e. GET requests. So in order to make my contact form work I need to configure POST requests.
+### My contact form
 
-In order to understand these request it is important to understand how http works. The next few steps take you though what I did and will give an idea of how GET and PUSH requests work. 
+When submit is clicked on the contact form I have built an error message is sent back:
 
-installing it locally doesn’t affect any other python programmes that you might want to run as a global install would do
+<p align="center"><img src="/images/4-http/http-error.png"
+     alt="content form screenshot" width="90%" /></p>
+
+## **"** The request could not be satisfied.
+
+## This distribution is not configured to allow the HTTP request method that was used for this request. The distribution supports only cachable requests.**"**
+
+This bascialy means that I have not configured the distribution to POST requests (the request method used when clicking on the 'submit' button). The distribution will only support cachable requests i.e. GET requests. So in order to make my contact form work I need to configure POST requests.
+
+To send the input submitted on the contact form over to the server I will need to use POST requests, these follow the same principals and I will cover them later.
 
 <br>
 ### Creating a virtual environment and installing Flask
 
-The first thing I did was to create a virtual environment on my computer to keep all the dependences together and then install Flask here so it can all work together but is isolated. Like a little bubble of programmes and files separated away from the rest of your computer.
+The first thing I did was to create a virtual environment on my computer to keep all the dependences together and then install Flask here so it can all work together but is isolated. Installing Flash locally doesn’t affect any other python programmes that you might want to run as a global install would do. Like a little bubble of programmes and files separated away from the rest of your computer.
 
 Steps on the command line:
 
@@ -80,60 +94,75 @@ Then we can install Flask and all it’s dependencies within the virtual environ
 ### Using Flask
 
 <p align="center"><img src="/images/4-http/flaskdownload.png"
-     alt="command to download flask" width="80%" /></p>
+     alt="command to download flask" width="70%" /></p>
 
 Then follow the steps which can be found on the <a href="http://flask.pocoo.org/">Flask site</a>:  
 
 Create a python file - I called mine test-python.py - containing the following:
 
 <p align="center"><img src="/images/4-http/python-file.png"
-     alt="Python code closeup" width="60%" /></p>
+     alt="Python code closeup" width="70%" /></p>
 
 Then create a file containing shell script (I called mine test-shellscsript.sh) containing the file name for your python file:
 
 <p align="center"><img src="/images/4-http/shell-script.png"
-     alt="shell script closeup" width="60%" /></p>
+     alt="shell script closeup" width="70%" /></p>
 
 <br>
 ### Opening a port to listen for an http request
 
-Then make sure you are in the test-server directory and run the shell script file:
+In order for our application to be able to listen for an http request it needs to be bound to an open port. The next steps are how I did this.
+
+Making sure you are in the test-server directory, run the shell script file:
 
 	(test-server) me$ cd test-server
 	(test-server) me$ test-shellscript.sh
-This came back with an error: -bash: test-shellscript.sh: command not found
-So I checked the permissions of the files within the test-server directory to check the shell file is executable:
+
+The first time I did this it came back with an error: 
+
+	-bash: test-shellscript.sh: command not found
+
+This is something I am getting familiar with now as it is often caused by the file permissions. I checked the permissions of the files within the test-server directory to see if the shell file was executable:
 
 	(test-server) me$ ls -al
 
-Output:
--rw-r--r--@  1 jenjones  staff   52 21 Mar 21:37 test-shellscript.sh
+<p align="center"><img src="/images/4-http/nonexecutable-permissions.png"
+     alt="code to show permissions" width="80%" /></p>
 
-Which is isn’t! No x. So I ran this code to change the access permissions so the shell file was executable:
+From the output for the test-shellscript.sh file you can see it is not executable as there would be an x in the permissions:
+
+	-rw-r--r--@  1 me  staff   52 21 Mar 21:37 test-shellscript.sh
+
+In order to change the access permissions I ran a line of code to make the shell file executable. The output below now shows the x for root, user and global permissions:
 
 	(test-server) me$ chmod +x test-shellscript.sh
 
-Then I ran the file again: 
+<p align="center"><img src="/images/4-http/executable-permissions-closeup.png"
+     alt="code to show permissions" width="80%" /></p>
+
+Then I ran the file again but got the same error!: 
 
 	(test-server) me$ test-shellscript.sh
 
-Again!: 
+	-bash: test-shellscript.sh: command not found
 
--bash: test-shellscript.sh: command not found
-
-WTF! So this is because I need to tell it that the to run the file from the directory I am currently in, otherwise it won’t find it. This can be shown by:
+The reason for this is that when you try to run a programme in the shell (bash/the command line) it looks in the path for executables. You can see the paths bash searches by writing the following:
 
 	me$ echo $PATH
 
-Which gives back the path that terminal will look in to run the script file within our directory, test-server.
+	/Library/Frameworks/Python.framework/Versions/3.6/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 
-/Library/Frameworks/Python.framework/Versions/3.6/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 
-As you can see the virtual server directory (test-server) is not checked so we need to tell it to run the file from the directory we are in. To do this add ./ before the command:
+<p align="center"><img src="/images/4-http/path.png"
+     alt="how to use path" width="80%" /></p>
 
- 	(test-server) me$ ./test-shellscript.sh 
+For instance when you type the ls command into bash it looks in the above path of directories, finds the programme called 'ls' that lives in user/bin and runs it. As you can see the virtual server directory (test-server) is not listed in the path. Unless I add the test-server directory to path or tell bash where to run the shell script from i.e. the test-server, it will come back with an error as bash will not be able to find it.
 
-Then the shell script executes our python file and we have an http port open, listening for anything. We bound our application to a port which is listening for an http request.
+I chose to run the shell 'test-shellscript.sh' by telling bash where to find it i.e. the directory I am currently in. To do this add ./ before the command:
+
+	(test-server) me$ ./test-shellscript.sh 
+
+Finally, no more errors and the shell script runs, executes the python file, binding the application to a port. This means the port is open, listening for an http request.
 
 <br>
 ### Making an http request using curl

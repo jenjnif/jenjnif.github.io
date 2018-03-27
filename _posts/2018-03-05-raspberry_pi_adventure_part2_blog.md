@@ -37,11 +37,23 @@ This uses Jekyll to build the 'site' folder without the need to start up a serve
 <br>
 ### Transferring my site to the Raspberry Pi
 
-My initial attempt to make a zip file of my site from the command line didn't seem to contain any files within folders, such as my image files within the images folder:
+Initally I attempted to make a zip file of my site from the command line:
 
 	me$ zip ../site.xml *
 
-For this reason I compressed the files manually. Then used SCP on my Mac to transfer the 'site.zip' folder onto the Raspberry Pi:
+However, the zip folder didn't contain any files within folders, such as my image files within the images folder. For this reason I compressed the files manually in Finder. 
+
+To securely transfer files between my local host (my Mac) and a remote host (my RP) I <a href="https://www.raspberrypi.org/documentation/remote-access/ssh/scp.md">used Secure copy protocol (SCP) which is based on SSH protocol (requires an SSH server)</a>.
+
+SSH is pre-installed on the RP but needs to be enabled:
+	
+	pi@raspberrypi:~ $ sudo systemctl enable ssh
+
+Then to start SSH running:
+
+	pi@raspberrypi:~ $ sudo systemctl start ssh
+
+Then used SCP on my Mac to transfer the 'site.zip' folder onto the Raspberry Pi:
 	
 	me$ scp site.zip pi@raspberrypi:~
 
