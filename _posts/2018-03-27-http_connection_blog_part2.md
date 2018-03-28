@@ -1,50 +1,40 @@
 ---
 layout: post
-title: Creating a website contact page part 1 - HTTP requests
+title: Creating a website contact page part 2 - simple HTTP request example
 excerpt_separator: <!--more-->
 ---
 
-**I recently built a content form which looks pretty good. The only problem is that when the submit button is pressed the information entered doesn't actually go anywhere and the user is left with an error message.**
+**In part 1 of 'Creating a website contact page' I discovered that I needed to use HTTP requests to submit the information entered in the contact form and sent it to me in the form of an email**
 
-The end goal for my contact form is to have the information stored and sent to me in the form of an email. To achieve this I knew I would have to send a request to the server and then use server side Python to email me the data but I wasn't entirely sure where to start.
-
+The second in my series of HTTP request articles walks through how to build a very simple HTTP request example to get a better understanding of how they work.
 <!--more-->
 
-<p align="center"><img src="/images/4-http/contactpage-and-error.png"
-     alt="content form screenshot" width="90%" /></p>
+<p align="center"><img src="/images/4-http/contactpage-and-error.png" alt="content form screenshot" width="90%" /></p>
 
-### Breaking it down
+My series of posts exploring how to use HTTP requests to submit the information entered in my contact form and sent to me in an email can be found via the links below.
+<!--more-->
 
-So, I broke the problem down into steps. Firstly, what does it mean to send a request to the server? Well, it involves HTTP, which enables communications between clients and servers - here's how http requests work.
+1.	<a href="/2018/03/22/http_basics_part1_blog.html">What is an HTTP request and how do basic HTTP requests work?</a>
+
+2. 	<a href="/2018/03/27/http_connection_blog_part2.html">A simple example of an HTTP request using Flask and Python.</a>
+
+3. 	Building a server to deal with my contact form - coming soon
+
+4. 	Serverless - another way to solve the contact form problem. - coming soon
+
+<br>
+### Quick recap
+
+So, let's just quickly recap on how basic HTTP requests work. The diagram below is a simplified version of how HTTP GET requests aquire data from the server and sends it back to the browser/client:
 
 <p align="center"><img src="/images/4-http/http-diagram-annotated.JPG"
      alt="http diagram" width="90%" /></p>
-
-There are a few different types of HTTP requests, GET and POST being the most common. The above diagram is a simplified version of how HTTP GET requests aquire data from the server and sends it back to the browser/client.
 
 1. A client (browser) submits an HTTP request for a resource (data) to a server (GET/ HTTP/1.1) over a TCP connection
 
 2. The server returns a response to the client
 
 3. The response contains status information about the request and may contain the requested content. Assuming the data request is successful it responds with a message to say "I understand, here is your requested data" (HTTP/1.1 200 OK) along with the requested data. 
-
-For more information on different types of http requests and erros this <a href="https://www.codecademy.com/articles/http-requests" title="http article codeacademy">article</a> from codeacademy.com is a great introduction.
-
-<br>
-### My contact form
-
-When submit is clicked on the contact form I have built an error message is sent back:
-
-<p align="center"><img src="/images/4-http/http-error.png"
-     alt="content form screenshot" width="90%" /></p>
-
-## **"** The request could not be satisfied.
-
-## This distribution is not configured to allow the HTTP request method that was used for this request. The distribution supports only cachable requests.**"**
-
-This bascialy means that I have not configured the distribution to POST requests (the request method used when clicking on the 'submit' button). The distribution will only support cachable requests i.e. GET requests. So in order to make my contact form work I need to configure POST requests.
-
-To send the input submitted on the contact form over to the server I will need to use POST requests, these follow the same principals and I will cover them later.
 
 <br>
 ### Creating a virtual environment and installing Flask
