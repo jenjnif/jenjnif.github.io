@@ -86,19 +86,19 @@ pre {
 	padding: 20px;
 }
 .blog img {
-	width: 330px;
+	max-height: 437px;
 	float: left;
+	margin: 20px 0 40px;
 	padding-right: 30px;
+}
+.blog-text {
+	padding-top: 20px;
 }
 .blog a {
 	padding: 0;
 }
 .blog h3 {
 	padding-bottom: 10px;
-}
-article {
-	padding-bottom: 30px;
-	min-height: 200px;
 }
 /*article:last-child {
 	padding-bottom: 0px;
@@ -142,4 +142,8 @@ Posts
 
 #post p {
 	line-height: 35px;
+}
+.post-block {
+	max-height: 480px;
+	padding-bottom: 40px;
 }

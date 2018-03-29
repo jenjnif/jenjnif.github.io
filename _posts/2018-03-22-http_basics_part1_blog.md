@@ -7,11 +7,11 @@ excerpt_separator: <!--more-->
 **Recently, I used HTML and CSS to build a contact form for a website, which I then hosted on AWS using S3 buckets. However, when the form was filled in and the submit button pressed, the information entered stayed put and an error message appeared. So... how do I fix this?**
 
 The answer to this problem lies in HTTP requests and more specifically how S3 deals with them. 
+<!--more-->
 
 <p align="center"><img src="/images/4-http/contactpage-and-error.png" alt="content form screenshot" width="90%" /></p>
 
 The next four posts will explore how to use HTTP requests to submit information entered in contact forms and then sent it in an email to a chosen recipient.
-<!--more-->
 
 1.	<a href="/2018/03/22/http_basics_part1_blog.html">What is an HTTP request and how do basic HTTP requests work?</a>
 
