@@ -8,18 +8,27 @@ title: Home Page
 		<h2>I am a junior developer digging into new skills and learning each day. I am currently developing my python skills and making websites using JavaScript and html/css and playing with my new toy - a Raspberry Pi. While I am not on my computer I love spending time in the outdoors climbing, surrounded by mountains and wildlife.</h2>
 	</div>
 	<div class="blog">
-		<img src="images/contact-form.png">
-		<div class="blog-text">
-			{% for post in site.posts limit: 3 %}
-			    <div class="post-block">
-
-    				<h3 class="title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
+		{% for post in site.posts limit: 1 %}
+		<div class="post-first">
+			
+				<div class="blog-text">
+					<img class="excerpt_only" src="{{ post.excerpt_image }}">
+					<h3 class="title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
 			      	<article>{{ post.excerpt }}
 			      	<p class="read-more"><a href="{{ post.url }}">Click here to read more</a></p></article>
-			  	</div>
-			  {% endfor %}
 				</div>
 		</div>
+		{% endfor %}
+
+		{% for post in site.posts limit: 3 offset: 1 %}
+		<div class="post-block">
+			<div class="blog-text">
+    			<h3 class="title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
+			      <article>{{ post.excerpt }}
+			      <p class="read-more"><a href="{{ post.url }}">Click here to read more</a></p></article>
+			</div>
+		</div>
+		{% endfor %}
 	</div>
 	<section class="courses">
 		<div class="courses-current">

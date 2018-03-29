@@ -87,8 +87,7 @@ pre {
 }
 .blog img {
 	max-height: 437px;
-	float: left;
-	margin: 20px 0 40px;
+	margin: 0px 0 40px;
 	padding-right: 30px;
 }
 .blog-text {
@@ -139,11 +138,15 @@ Posts
 .posts li {
 	padding-bottom: 20px;
 }
-
 #post p {
 	line-height: 35px;
 }
-.post-block {
-	max-height: 480px;
+.post-block .post-first{
 	padding-bottom: 40px;
+}
+.blog-text {
+	display: inline-block;
+}
+.excerpt_only {
+	float: left;
 }

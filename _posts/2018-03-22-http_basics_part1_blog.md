@@ -2,11 +2,12 @@
 layout: post
 title: Creating a website contact page part 1 - basic HTTP requests
 excerpt_separator: <!--more-->
+excerpt_image: images/contact-form.png
 ---
 
 **Recently, I used HTML and CSS to build a contact form for a website, which I then hosted on AWS using S3 buckets. However, when the form was filled in and the submit button pressed, the information entered stayed put and an error message appeared. So... how do I fix this?**
 
-The answer to this problem lies in HTTP requests and more specifically how S3 deals with them. 
+The answer to this problem lies in understanding HTTP requests and more specifically how S3 deals with them. 
 <!--more-->
 
 <p align="center"><img src="/images/4-http/contactpage-and-error.png" alt="content form screenshot" width="90%" /></p>
@@ -52,14 +53,14 @@ When the submit button is clicked on my contact form this Amazon S3 built-in err
 <p align="center"><img src="/images/4-http/http-error.png"
      alt="content form screenshot" width="90%" /></p>
 
-In short, this error means that the HTTP request failed! In order to send the input submitted over to the server I need to configure the form to handle POST requests. Why we need to do this should become much clearer when we look at how submit buttons are built.
+In short, this error means that the HTTP request failed! Why becomes a bit clearer when we look at how Amazon S3 is configured.
 
 <br>
 ### Amazon S3
 
-Amazon Simple Storage Service (S3) is an object storage service where all my site files are stored in a resource (what AWS call a 'bucket'). Amazon S3 has the added functionallity of being configurable to host a static site, which means it will serve my HTML files to the public but with no dynamic componant. 
+Amazon Simple Storage Service (S3) is an object storage service where all my site files are stored in a resource (what AWS call a 'bucket'). Amazon S3 has the added functionality of being configurable to host a static site, which means it will serve my HTML files to the public - this means it handles GET requests but nothing else. 
 
-As previously mentioned, HTTP GET requests are fundamental in loading webpages; if S3 could not handle GET requests my website would not load. However, something else will be required to handle POST requests.
+As previously mentioned, HTTP GET requests are fundamental in loading webpages; if S3 could not handle GET requests my website would not load. However, in order to handle POST requests I will need to create a different server to handle them. 
 
 In the next post I will be building <a href="/2018/03/27/http_connection_blog_part2.html">a simple example of an HTTP request using Flask and Python</a> to discover more about how HTTP works.
 
