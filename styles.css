@@ -70,7 +70,7 @@ header {
 pre {
 	font-size: 16px;
 }
-.tagline, .blog, .courses-current, .courses-completed, .skills, .dev-blog, .blog-list, .blog-title {
+.tagline, .blog, .courses-current, .courses-completed, .skills, .dev-blog, .blog-list, .blog-title, .course-list {
 	width: 800px;
 	margin: 0 auto 40px auto;
 	padding-bottom: 20px;
@@ -103,13 +103,15 @@ pre {
 	padding-bottom: 0px;
 	margin-bottom: 0px;
 }*/
-.course {
-	font-size: 20px;
-	font-weight: 300;
-	padding-bottom: 30px
+.course h3{
+	font-size: 22px;
+	font-weight: 400;
+	padding-bottom: 10px
 }
 .course-summary {
-
+	font-size: 20px;
+	margin: 0;
+	padding-bottom: 30px;
 }
 .skills li{
 	font-weight: bold;
@@ -133,13 +135,16 @@ Posts
 #post {
 	width: 800px;
 	margin: 0 auto 20px auto;
-	/*padding-bottom: 100px;*/
+	padding-bottom: 80px;
 }
 .posts li {
 	padding-bottom: 20px;
 }
 #post p {
 	line-height: 35px;
+}
+.blog-header h2 {
+	padding-top: 50px;
 }
 .post-block .post-first{
 	padding-bottom: 40px;

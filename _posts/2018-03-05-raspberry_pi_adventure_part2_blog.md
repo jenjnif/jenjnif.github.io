@@ -9,6 +9,7 @@ excerpt_separator: <!--more-->
 
 In part 2 I describe how I used Jekyll to produce HTML and CSS files from my GitHub Pages markdown files and then transferred the files onto the Raspberry Pi to view my website.  
 <!--more-->
+
 <br>
 <p align="center"><img src="/images/1-2-3-RP/RP-closeup.jpeg"
      alt="Raspberry Pi" width="300px" /></p>

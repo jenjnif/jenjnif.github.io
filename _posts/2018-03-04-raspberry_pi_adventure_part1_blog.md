@@ -9,6 +9,7 @@ excerpt_separator: <!--more-->
 
 Sunday 4 March 2018 was the day I plugged it in and turned it on.  
 <!--more-->
+
 <p align="center"><img src="/images/1-2-3-RP/RP-closeup.jpeg"
      alt="Raspberry Pi" width="300px" /></p>
 Historically, I have not played much with computers, electronics or soldering irons but in recent years I've become more and more drawn to programming and last year I decided to finally act on my desire to learn to be a developer. This led me down a path along which, amongst huge amounts of excitement last May, I discovered Raspberry Pi. Then, about a month ago, a Raspberry Pi surprise gift package turned up in the post. Although my first foray did not go as exactly as expected - I did not solder the header onto my Raspberry Pi and create a robot worthy of fame and fortune on YouTube or even write a python program - I did manage to transform it into a server, use Jekyll to convert <a href="jenjnif.github.io">my GitHub Pages website</a> files into HTML and CSS and transfer them onto the Raspberry Pi and then view the site over the RP's network. 
