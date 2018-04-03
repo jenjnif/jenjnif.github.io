@@ -10,23 +10,21 @@ layout: default
 
 <h2 class="blog-title">{{ post.title }}</h2>
 
-<div>
+<div class="next-previous">
 {% if page.previous.url %}
-<a href="{{ page.previous.url }}">Previous</a>
+<a href="{{ page.previous.url }}" class="previous">&#60 Previous</a>
 {% endif %}
 {% if page.next.url %}
-<br/>
-<a href="{{ page.next.url }}">Next</a>
+<a href="{{ page.next.url }}" class="next">Next &#62</a>
 {% endif %}
 </div>
 {{ content }}
 </div>
-<div>
+<div class="next-previous">
 {% if page.previous.url %}
-<a href="{{ page.previous.url }}">Previous</a>
+<a href="{{ page.previous.url }}" class="previous">&#60 Previous</a>
 {% endif %}
 {% if page.next.url %}
-<br/>
-<a href="{{ page.next.url }}">Next</a>
+<a href="{{ page.next.url }}" class="next">Next &#62</a>
 {% endif %}
 </div>
