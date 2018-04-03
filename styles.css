@@ -136,16 +136,13 @@ Posts
 #post {
 	width: 800px;
 	margin: 0 auto 20px auto;
-	padding-bottom: 80px;
+	padding-bottom: 4px;
 }
 .posts li {
 	padding-bottom: 20px;
 }
 #post p {
 	line-height: 35px;
-}
-.blog-header h2 {
-	padding-top: 50px;
 }
 .post-block, .post-first {
 	margin-bottom: 40px;
@@ -159,8 +156,11 @@ Posts
 .excerpt_only {
 	float: left;
 }
-.next-previous {
+.next-previous-top, .next-previous-bottom {
 	text-align: center;
+}
+.next-previous-bottom {
+	padding-bottom: 30px;
 }
 .previous {
 	padding-right: 10px;
@@ -168,7 +168,3 @@ Posts
 .next {
 	padding-left: 10px;
 }
-
-
-
-

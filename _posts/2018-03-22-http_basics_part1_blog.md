@@ -5,14 +5,14 @@ excerpt_separator: <!--more-->
 excerpt_image: images/contact-form.png
 ---
 
-**Recently, I used HTML and CSS to build a contact form for a website, which I then hosted on AWS using S3 buckets. However, when the form was filled in and the submit button pressed, the information entered stayed put and an error message appeared. So... how do I fix this?**
+**Recently, I used HTML and CSS to build a contact form for a website, which I then hosted on AWS using Amazon S3. However, when the form was filled in and the submit button pressed, the information entered stayed put and an error message appeared. So... what is going on?**
 
 The answer to this problem lies in understanding HTTP requests and more specifically how S3 deals with them. 
 <!--more-->
 
 <p align="center"><img src="/images/4-http/contactpage-and-error.png" alt="content form screenshot" width="90%" /></p>
 
-The next four posts will explore how to use HTTP requests to submit information entered in contact forms and then sent it in an email to a chosen recipient.
+The next four posts will explore how to use HTTP requests to submit information entered in contact forms and then send it in an email to a chosen recipient:
 
 1.	<a href="/2018/03/22/http_basics_part1_blog.html">What is an HTTP request and how do basic HTTP requests work?</a>
 
@@ -35,9 +35,9 @@ The diagram below is a simplified version of how HTTP GET requests aquire data f
 
 2. The server returns a response to the client via the TCP connection.
 
-3. The response contains status information about the request - if the data request is successful it responds with a message to say "I understand, here is your requested data" (HTTP/1.1 200 OK) along with the requested data and the TCP connection is closed.
+3. The response contains status information about the request - if the data request is successful it responds with a message to say "I understand, here is your requested data" (HTTP/1.1 200 OK) along with the requested data. The TCP connection is then closed.
 
-For a more detailed explanation of GET requests and further information on different types of HTTP requests and erros this <a href="https://www.codecademy.com/articles/http-requests" title="http article codeacademy">article from codeacademy.com</a> is a great introduction.
+For a more detailed explanation of GET requests and further information on different types of HTTP requests and errors <a href="https://www.codecademy.com/articles/http-requests" title="http article codeacademy">this article from codeacademy.com</a> is a great introduction.
 
 <br>
 ### Submit buttons & HTTP POST requests
@@ -58,7 +58,7 @@ In short, this error means that the HTTP request failed! Why becomes a bit clear
 <br>
 ### Amazon S3
 
-Amazon Simple Storage Service (S3) is an object storage service where all my site files are stored in a resource (what AWS call a 'bucket'). Amazon S3 has the added functionality of being configurable to host a static site, which means it will serve my HTML files to the public - this means it handles GET requests but nothing else. 
+<a href="https://aws.amazon.com/s3/">Amazon Simple Storage Service (S3)</a> is an object storage service where all my site files are stored in a resource (what AWS call a 'bucket'). Amazon S3 has the added functionality of being <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteHosting.html">configurable to host a static site</a>, which means it will serve my HTML files to the public - this means it handles GET requests but nothing else. 
 
 As previously mentioned, HTTP GET requests are fundamental in loading webpages; if S3 could not handle GET requests my website would not load. However, in order to handle POST requests I will need to create a different server to handle them. 
 

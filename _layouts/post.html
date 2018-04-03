@@ -10,7 +10,7 @@ layout: default
 
 <h2 class="blog-title">{{ post.title }}</h2>
 
-<div class="next-previous">
+<div class="next-previous-top">
 {% if page.previous.url %}
 <a href="{{ page.previous.url }}" class="previous">&#60 Previous</a>
 {% endif %}
@@ -20,7 +20,7 @@ layout: default
 </div>
 {{ content }}
 </div>
-<div class="next-previous">
+<div class="next-previous-bottom">
 {% if page.previous.url %}
 <a href="{{ page.previous.url }}" class="previous">&#60 Previous</a>
 {% endif %}

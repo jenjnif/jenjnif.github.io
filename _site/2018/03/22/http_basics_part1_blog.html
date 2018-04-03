@@ -25,7 +25,7 @@
 
 <h2 class="blog-title"></h2>
 
-<div class="next-previous">
+<div class="next-previous-top">
 
 <a href="/2018/03/05/raspberry_pi_adventure_part2_blog.html" class="previous">&#60 Previous</a>
 
@@ -33,14 +33,14 @@
 <a href="/2018/03/27/http_connection_blog_part2.html" class="next">Next &#62</a>
 
 </div>
-<p><strong>Recently, I used HTML and CSS to build a contact form for a website, which I then hosted on AWS using S3 buckets. However, when the form was filled in and the submit button pressed, the information entered stayed put and an error message appeared. So… how do I fix this?</strong></p>
+<p><strong>Recently, I used HTML and CSS to build a contact form for a website, which I then hosted on AWS using Amazon S3. However, when the form was filled in and the submit button pressed, the information entered stayed put and an error message appeared. So… what is going on?</strong></p>
 
 <p>The answer to this problem lies in understanding HTTP requests and more specifically how S3 deals with them. 
 <!--more--></p>
 
 <p align="center"><img src="/images/4-http/contactpage-and-error.png" alt="content form screenshot" width="90%" /></p>
 
-<p>The next four posts will explore how to use HTTP requests to submit information entered in contact forms and then sent it in an email to a chosen recipient.</p>
+<p>The next four posts will explore how to use HTTP requests to submit information entered in contact forms and then send it in an email to a chosen recipient:</p>
 
 <ol>
   <li>
@@ -73,11 +73,11 @@ The diagram below is a simplified version of how HTTP GET requests aquire data f
     <p>The server returns a response to the client via the TCP connection.</p>
   </li>
   <li>
-    <p>The response contains status information about the request - if the data request is successful it responds with a message to say “I understand, here is your requested data” (HTTP/1.1 200 OK) along with the requested data and the TCP connection is closed.</p>
+    <p>The response contains status information about the request - if the data request is successful it responds with a message to say “I understand, here is your requested data” (HTTP/1.1 200 OK) along with the requested data. The TCP connection is then closed.</p>
   </li>
 </ol>
 
-<p>For a more detailed explanation of GET requests and further information on different types of HTTP requests and erros this <a href="https://www.codecademy.com/articles/http-requests" title="http article codeacademy">article from codeacademy.com</a> is a great introduction.</p>
+<p>For a more detailed explanation of GET requests and further information on different types of HTTP requests and errors <a href="https://www.codecademy.com/articles/http-requests" title="http article codeacademy">this article from codeacademy.com</a> is a great introduction.</p>
 
 <p><br /></p>
 <h3 id="submit-buttons--http-post-requests">Submit buttons &amp; HTTP POST requests</h3>
@@ -97,7 +97,7 @@ The diagram below is a simplified version of how HTTP GET requests aquire data f
 <p><br /></p>
 <h3 id="amazon-s3">Amazon S3</h3>
 
-<p>Amazon Simple Storage Service (S3) is an object storage service where all my site files are stored in a resource (what AWS call a ‘bucket’). Amazon S3 has the added functionality of being configurable to host a static site, which means it will serve my HTML files to the public - this means it handles GET requests but nothing else.</p>
+<p><a href="https://aws.amazon.com/s3/">Amazon Simple Storage Service (S3)</a> is an object storage service where all my site files are stored in a resource (what AWS call a ‘bucket’). Amazon S3 has the added functionality of being <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteHosting.html">configurable to host a static site</a>, which means it will serve my HTML files to the public - this means it handles GET requests but nothing else.</p>
 
 <p>As previously mentioned, HTTP GET requests are fundamental in loading webpages; if S3 could not handle GET requests my website would not load. However, in order to handle POST requests I will need to create a different server to handle them.</p>
 
@@ -105,7 +105,7 @@ The diagram below is a simplified version of how HTTP GET requests aquire data f
 
 
 </div>
-<div class="next-previous">
+<div class="next-previous-bottom">
 
 <a href="/2018/03/05/raspberry_pi_adventure_part2_blog.html" class="previous">&#60 Previous</a>
 
