@@ -5,12 +5,12 @@ excerpt_separator: <!--more-->
 excerpt_image: images/4-http/http-diagram-annotated.JPG
 ---
 
-**In part 1 of 'Creating a website contact page' I discovered that I needed to use HTTP requests to submit the information entered in the contact form and sent it to me in the form of an email**
+**In part 1 of 'Creating a website contact page' I discovered that in order to submit the information entered in the contact form stored on Amazon S3 I need to create a different server to handle POST requests**
 
-The second in my series of HTTP request articles walks through how to build a very simple HTTP request example to get a better understanding of how they work.
+The second in my series of HTTP request articles walks through how to build a very simple example of an HTTP request to get a better understanding of how they work.
 <!--more-->
 
-My series of posts exploring how to use HTTP requests to submit the information entered in my contact form and sent to me in an email can be found via the links below.
+Links to the other posts in the HTTP series:
 
 1.	<a href="/2018/03/22/http_basics_part1_blog.html">What is an HTTP request and how do basic HTTP requests work?</a>
 
@@ -23,7 +23,7 @@ My series of posts exploring how to use HTTP requests to submit the information 
 <br>
 ### Quick recap
 
-So, let's just quickly recap on how basic HTTP requests work. The diagram below is a simplified version of how HTTP GET requests aquire data from the server and sends it back to the browser/client:
+So, let's just quickly recap on how basic HTTP requests work. HTTP GET requests aquire data from the server and send it back to the browser/client:
 
 <p align="center"><img src="/images/4-http/http-diagram-annotated.JPG"
      alt="http diagram" width="90%" /></p>
