@@ -10,7 +10,7 @@ excerpt_image: images/4-http/http-diagram-annotated.JPG
 The second in my series of HTTP request articles walks through how to build a very simple example of an HTTP request to get a better understanding of how they work.
 <!--more-->
 
-Links to the other posts in the HTTP series:
+HTTP series posts:
 
 1.	<a href="/2018/03/22/http_basics_part1_blog.html">What is an HTTP request and how do basic HTTP requests work?</a>
 
@@ -34,12 +34,10 @@ So, let's just quickly recap on how basic HTTP requests work. HTTP GET requests 
 
 3. The response contains status information about the request and may contain the requested content. Assuming the data request is successful it responds with a message to say "I understand, here is your requested data" (HTTP/1.1 200 OK) along with the requested data. 
 
-The server must be listening on a port on a computer with an IP address linked to the domain name. But dont we already deal with a GET http request to show the form HTML itself? In my case the answer is 'sort of'... 
-
 <br>
 ### Creating a virtual environment and installing Flask
 
-The first thing I did was to create a virtual environment on my computer to keep all the dependences together and then install Flask here so it can all work together but is isolated. Installing Flash locally doesn’t affect any other python programmes that you might want to run as a global install would do. Like a little bubble of programmes and files separated away from the rest of your computer.
+The first thing I did was to create a virtual environment and install Flask within it so all the dependences can work together but are isolated from other python programmes that I might want to run. Creating this local environment is like a little bubble of programmes and files separated away from the rest of the computer.
 
 Steps on the command line:
 
@@ -59,7 +57,7 @@ Create a virtual environment (a directory) and give it a name e.g.'test-server':
 
 This runs the module 'venv' (virtual environment) with the parameter test-server, which creates a directory called 'test-server'.
 
-Then to activate the virtual environment in the command line we simply write:
+Then, to activate the virtual environment in the command line:
 
 	me$ source test-server/bin/activate
 
@@ -76,7 +74,7 @@ to this:
 <p align="center"><img src="/images/4-http/prompt-name.png"
      alt="prompt name change" width="70%" /></p>
 
-Then we can install Flask and all it’s dependencies within the virtual environment:
+To install Flask and all it’s dependencies within the virtual environment:
 
 	(test-server) $ pip install flask
 
@@ -93,7 +91,7 @@ Create a python file - I called mine test-python.py - containing the following:
 <p align="center"><img src="/images/4-http/python-file.png"
      alt="Python code closeup" width="70%" /></p>
 
-Then create a file containing shell script (I called mine test-shellscsript.sh) containing the file name for your python file:
+Create a file containing shell script (I called mine test-shellscsript.sh) containing the file name for your python file:
 
 <p align="center"><img src="/images/4-http/shell-script.png"
      alt="shell script closeup" width="70%" /></p>
@@ -101,7 +99,7 @@ Then create a file containing shell script (I called mine test-shellscsript.sh) 
 <br>
 ### Opening a port to listen for an http request
 
-In order for our application to be able to listen for an http request it needs to be bound to an open port. The next steps are how I did this.
+In order for our application to be able to listen for an HTTP request it needs to be bound to an open port. The next steps are how I did this.
 
 Making sure you are in the test-server directory, run the shell script file:
 
@@ -152,16 +150,15 @@ I chose to run the shell 'test-shellscript.sh' by telling bash where to find it 
 
 	(test-server) me$ ./test-shellscript.sh 
 
-Finally, no more errors and the shell script runs, executes the python file, binding the application to a port. This means the port is open, listening for an http request.
+The shell script ran with no errors. This executes the python file, binding the application to a port. The port is open, listening for an HTTP request.
 
 <br>
 ### Making an http request using curl
 
-Then we open another terminal window and make an http request using curl to that port.:
+The next step is to make an HTTP request using curl to that port in a new terminal window:
 
 	me$ curl 127.0.0.1:5000 --verbose
 
-This will send an http request over the port, the python script will run and send back “Hello World”
-This can be seen more easily in a browser using the IP address and port.
+This sends an HTTP request over the port. The python script runs and sends back “Hello World”. This can be seen more easily in a browser using the IP address and port.
 
 https://www.digitalocean.com/community/tutorials/how-to-install-python-3-and-set-up-a-local-programming-environment-on-ubuntu-16-04
