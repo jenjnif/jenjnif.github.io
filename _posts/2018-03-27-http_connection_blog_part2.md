@@ -10,7 +10,7 @@ excerpt_image: images/4-http/http-diagram-annotated.JPG
 The second in my series of HTTP request articles walks through how to build a very simple example of an HTTP request to get a better understanding of how they work.
 <!--more-->
 
-HTTP series posts:
+Other HTTP series posts:
 
 1.	<a href="/2018/03/22/http_basics_part1_blog.html">What is an HTTP request and how do basic HTTP requests work?</a>
 
@@ -23,7 +23,7 @@ HTTP series posts:
 <br>
 ### Quick recap
 
-So, let's just quickly recap on how basic HTTP requests work. HTTP GET requests aquire data from the server and send it back to the browser/client:
+So, to quickly recap on how basic HTTP requests work. HTTP GET requests aquire data from the server and send it back to the browser/client:
 
 <p align="center"><img src="/images/4-http/http-diagram-annotated.JPG"
      alt="http diagram" width="90%" /></p>
@@ -37,7 +37,9 @@ So, let's just quickly recap on how basic HTTP requests work. HTTP GET requests 
 <br>
 ### Creating a virtual environment and installing Flask
 
-The first thing I did was to create a virtual environment and install Flask within it so all the dependences can work together but are isolated from other python programmes that I might want to run. Creating this local environment is like a little bubble of programmes and files separated away from the rest of the computer.
+In order to build an example of an HTTP request it is a good idea to create an isolated Python development environment to work in. This will keep it seperate from any other libraries already installed. The environment can then be kept for further development work or easily deleted. Creating this local environment is like a little bubble of programmes and files separated away from the rest of the computer.
+
+I created a virtual environment using the 'venv' module and installed Flask (a microframework for Python which I used to facilitate HTTP requests) within it so all the dependences can work together but are isolated from other python programmes that I might want to run.
 
 Steps on the command line:
 
@@ -63,14 +65,6 @@ Then, to activate the virtual environment in the command line:
 
 This changes the prompt to: (virtualenvironment-name) $
 
-In my case from this:
-
-	me$
-
-to this:
-
-	(test-server) me$
-
 <p align="center"><img src="/images/4-http/prompt-name.png"
      alt="prompt name change" width="70%" /></p>
 
@@ -78,20 +72,19 @@ To install Flask and all it’s dependencies within the virtual environment:
 
 	(test-server) $ pip install flask
 
+<p align="center"><img src="/images/4-http/flaskdownload.png" alt="command to download flask" width="70%" /></p>
+
 <br>
 ### Using Flask
 
-<p align="center"><img src="/images/4-http/flaskdownload.png"
-     alt="command to download flask" width="70%" /></p>
+To set up Flask simply follow these steps which can be found on the <a href="http://flask.pocoo.org/">Flask site</a>:  
 
-Then follow the steps which can be found on the <a href="http://flask.pocoo.org/">Flask site</a>:  
-
-Create a python file - I called mine test-python.py - containing the following:
+Firstly, create a python file - I called mine test-python.py - containing the following:
 
 <p align="center"><img src="/images/4-http/python-file.png"
      alt="Python code closeup" width="70%" /></p>
 
-Create a file containing shell script (I called mine test-shellscsript.sh) containing the file name for your python file:
+Then create a file containing shell script (I called mine test-shellscsript.sh) containing the file name for your python file:
 
 <p align="center"><img src="/images/4-http/shell-script.png"
      alt="shell script closeup" width="70%" /></p>
@@ -110,47 +103,44 @@ The first time I did this it came back with an error:
 
 	-bash: test-shellscript.sh: command not found
 
-This is something I am getting familiar with now as it is often caused by the file permissions. I checked the permissions of the files within the test-server directory to see if the shell file was executable:
+This is something I am getting familiar with now and it is often caused by the file permissions. I checked the permissions of the files within the test-server directory to see if the shell file was executable:
 
 	(test-server) me$ ls -al
 
 <p align="center"><img src="/images/4-http/nonexecutable-permissions.png"
      alt="code to show permissions" width="80%" /></p>
 
-From the output for the test-shellscript.sh file you can see it is not executable as there would be an x in the permissions:
+From the output for the test-shellscript.sh file you can see it is not executable as there would be an 'x' in the permissions.
 
-	-rw-r--r--@  1 me  staff   52 21 Mar 21:37 test-shellscript.sh
-
-In order to change the access permissions I ran a line of code to make the shell file executable. The output below now shows the x for root, user and global permissions:
+In order to change the access permissions I ran a line of code to make the shell file executable:
 
 	(test-server) me$ chmod +x test-shellscript.sh
+
+The output below now shows the an 'x' for root, user and global permissions, meaning they are all executable:
 
 <p align="center"><img src="/images/4-http/executable-permissions-closeup.png"
      alt="code to show permissions" width="80%" /></p>
 
-Then I ran the file again but got the same error!: 
+I ran the file again but got the same error!: 
 
 	(test-server) me$ test-shellscript.sh
 
 	-bash: test-shellscript.sh: command not found
 
-The reason for this is that when you try to run a programme in the shell (bash/the command line) it looks in the path for executables. You can see the paths bash searches by writing the following:
-
-	me$ echo $PATH
-
-	/Library/Frameworks/Python.framework/Versions/3.6/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
-
+The reason for this is that to run a programme in the shell it looks in the path for executables. For instance when you type the 'ls' command into bash it looks in the path of directories, finds the programme called 'ls' that lives in usr/bin and runs it. You can see the paths bash searches using the command:
+	
+	echo $PATH
 
 <p align="center"><img src="/images/4-http/path.png"
      alt="how to use path" width="80%" /></p>
 
-For instance when you type the ls command into bash it looks in the above path of directories, finds the programme called 'ls' that lives in user/bin and runs it. As you can see the virtual server directory (test-server) is not listed in the path. Unless I add the test-server directory to path or tell bash where to run the shell script from i.e. the test-server, it will come back with an error as bash will not be able to find it.
+As you can see the virtual server directory (test-server) is not listed in the path. Unless I add the test-server directory to path or tell bash where to run the shell script from i.e. the test-server, it will come back with an error as bash will not be able to find it.
 
-I chose to run the shell 'test-shellscript.sh' by telling bash where to find it i.e. the directory I am currently in. To do this add ./ before the command:
+I chose to run the shell 'test-shellscript.sh' by telling bash where to find it i.e. the directory I am currently in. To do this I just added './' before the command:
 
 	(test-server) me$ ./test-shellscript.sh 
 
-The shell script ran with no errors. This executes the python file, binding the application to a port. The port is open, listening for an HTTP request.
+This time the shell script ran without any errors, executing the python file and binding the application to a port. At this point the port is open, listening for an HTTP request.
 
 <br>
 ### Making an http request using curl
@@ -159,6 +149,21 @@ The next step is to make an HTTP request using curl to that port in a new termin
 
 	me$ curl 127.0.0.1:5000 --verbose
 
-This sends an HTTP request over the port. The python script runs and sends back “Hello World”. This can be seen more easily in a browser using the IP address and port.
+This sends an HTTP request over the port. The python script runs and sends back “Hello World”. 
 
-https://www.digitalocean.com/community/tutorials/how-to-install-python-3-and-set-up-a-local-programming-environment-on-ubuntu-16-04
+This can be seen clearer in the graphic below:
+1. Run the shell script. This opens a port and the server is ready and waiting for an HTTP request.
+2. In another bash window (representing the client) we send an HTTP GET request to the open port using curl.
+3. The Python script is run on the server...
+4. ...which sends over the 'Hello World' response.
+
+<p align="center"><img src="/images/4-http/server-running-hello.png"
+     alt="the two sides of the GET request in bash" width="80%" /></p>
+
+The result of the request can be seen more easily in a browser using the IP address and port:
+
+<p align="center"><img src="/images/4-http/browser-hello.png"
+     alt="hello world in browser" width="80%" /></p>
+
+My next HTTP post will walk through how I build a server to deal with my contact form.
+

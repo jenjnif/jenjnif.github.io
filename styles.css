@@ -27,7 +27,7 @@ h2 {
 }
 h3 {
 	font-size: 22px;
-	font-weight: 400;
+	font-weight: 700;
 	margin: 0 auto;
 }
 h4 {
@@ -75,9 +75,11 @@ pre {
 	margin: 0 auto 40px auto;
 	padding-bottom: 20px;
 	border-bottom: 1px solid #555555;
+	font-weight: normal;
 }
 .tagline-text {
-	font-weight: 100;
+	font-weight: 200;
+	font-style: normal;
 
 }
 .skills, .course-list {
