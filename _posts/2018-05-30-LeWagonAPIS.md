@@ -11,7 +11,7 @@ Some events are tech talks, some are workshops learning with mentors and others 
 
 <br>
 <p align="center"><img src="/images/LeWagon/API-notes.JPG"
-     alt="My Le Wagon notes" width="300px" /></p>
+     alt="My Le Wagon notes" width="90%" /></p>
 <br>
 
 ### Who are Le Wagon?
