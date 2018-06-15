@@ -4,7 +4,7 @@ title: Le Wagon API for beginners, Coding Workshop
 excerpt_separator: <!--more-->
 ---
 
-**As someone who is self teaching themselves to programmen I try to go to as many tech meetups as possible.**  
+**As someone who is self teaching themselves to programme, I try to go to as many tech meetups as possible.**  
 
 Some events are tech talks, some are workshops learning with mentors and others are more networking or promotional but I always come away from each one having learned or gained something new. A particularly good example, was meeting a new friend at s Codebar event who told me about Le Wagon's free workshop series.
 <!--more-->
