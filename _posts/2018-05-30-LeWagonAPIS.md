@@ -10,8 +10,8 @@ Some events are tech talks, some are workshops learning with mentors and others 
 <!--more-->
 
 <br>
-<p align="center"><img src="/images/1-2-3-RP/RP-closeup.jpeg"
-     alt="Raspberry Pi" width="300px" /></p>
+<p align="center"><img src="/images/LeWagon/API-notes.JPG"
+     alt="My Le Wagon notes" width="300px" /></p>
 <br>
 
 ### Who are Le Wagon?
