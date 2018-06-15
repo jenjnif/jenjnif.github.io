@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Tech event: Le Wagon: API for beginners - Coding Workshop
+title: Le Wagon API for beginners, Coding Workshop
 excerpt_separator: <!--more-->
 ---
 
