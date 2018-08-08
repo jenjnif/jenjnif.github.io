@@ -4,7 +4,7 @@ title: Alpine Club UK Introductory meet 8-10 June 2018
 excerpt_separator: <!--more-->
 ---
 
-**At the beginning of June we set off in our van for a multi week adventure of UK climbing and beautiful scenery.**  
+**At the beginning of June we set off in our van for a multi week adventure of UK climbing and beautiful scenery.**
 
 <p align="center"><img src="/images/AlpineIntroMeet/EagleCrag.JPG"
      alt="Sunday visit to Eagle Crag" width="90%" /></p>

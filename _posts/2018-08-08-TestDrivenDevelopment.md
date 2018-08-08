@@ -4,7 +4,7 @@ title: Test Driven Development - Meeting the Testing Goat
 excerpt_separator: <!--more-->
 ---
 
-**As part of my job I implement features and fix bugs for a web application involving a session booking system (that I find very confusing!) with various login access levels and specifications.**  
+**As part of my job I implement features and fix bugs for a web application involving a session booking system (that I find very confusing!) with various login access levels and specifications.**
 
 <p align="center"><img src="/images/TestingOne/Goat.JPG"
      alt="Sunday visit to Eagle Crag" width="60%" /></p>
