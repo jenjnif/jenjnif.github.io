@@ -4,12 +4,12 @@ title: Test Driven Development - Meeting the Testing Goat
 excerpt_separator: <!--more-->
 ---
 
-**As part of my job I implement features and fix bugs for a web application involving quite a confusing session booking system with various access levels and specifications.**  
+**As part of my job I implement features and fix bugs for a web application involving a session booking system that I find confusing with various access levels and specifications.**  
 
 <p align="center"><img src="/images/TestingOne/Goat.JPG"
      alt="Sunday visit to Eagle Crag" width="60%" /></p>
 
-As many programmers will have found before me, projects quickly become warrens. Fixing one thing illumintates further issues and breaks other parts of the code. Before you know it you are in a complicated web of dispair. It quickly became clear how important tests are, especially as projects grow and become more complex as my one has. 
+As many programmers will have found before me, projects quickly become warrens. Fixing one thing illuminates further issues and breaks other parts of the code. Before you know it you are in a complicated web of dispair. It quickly became clear how important tests are, especially as projects grow and become more complex as my one has. 
 <!--more-->
 
 <br>
