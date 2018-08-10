@@ -20,11 +20,11 @@ Some events are tech talks, some are workshops learning with mentors and others 
 
 ### What did I learn in summary?
 
-The session lasted for an hour and was a suprisingly complete whirlwind tour of APIs. Right from the very basics - what are they? - to what they look like, who uses them, how they are used.
+The session lasted for an hour and was a suprisingly complete whirlwind tour of APIs. Right from the very basics - what they are - to what they look like, who uses them, how they are used.
 
 API stands for Application programming interface. It is the interface used to interact with applications. By applications I am talking about mobile applications and web applications, i.e. anything you might use on the web or your mobile device.
 
-APIs are consumed by programs, not users i.e. there is no direct interaction between users and APIs. Only developers interact with them through code.
+APIs are consumed by programmers, not users i.e. there is no direct interaction between users and APIs. Only developers interact with them through code.
 
 The analogy they used to describe APIs was that they are like plug sockets: they expose electricity (the API) for a device to work in some way, but it doesn't matter what the electronic device (the application in whatever language it is written in). For example, the Google maps API (electricity) can be used on the airbnb site, your own website, the Trailfinders website etc. (the devices), using whatever programming language they are written in.
 
