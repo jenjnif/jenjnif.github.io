@@ -7,55 +7,55 @@ Site wide
 *
 **/
 html, body, h1, h2, h3, h4, p, div, ul, ol, li {
-	padding: 0;
-	border: 0;
-	margin: 0;
-	font: inherit;
-	font-size: 100%;
-	font-family: "Raleway", "Helvetica Neue", Helvetica, sans-serif;
+    padding: 0;
+    border: 0;
+    margin: 0;
+    font: inherit;
+    font-size: 100%;
+    font-family: "Raleway", "Helvetica Neue", Helvetica, sans-serif;
 }
 h1 {
-	font-size: 70px;
-	font-weight: bold;
-	text-align: center;
+    font-size: 70px;
+    font-weight: bold;
+    text-align: center;
 }
 h2 {
-	font-size: 30px;
-	font-weight: 100;
-	text-align: center;
-	margin: 0 auto;
+    font-size: 30px;
+    font-weight: 100;
+    text-align: center;
+    margin: 0 auto;
 }
 h3 {
-	font-size: 22px;
-	font-weight: 700;
-	margin: 0 auto;
+    font-size: 22px;
+    font-weight: 700;
+    margin: 0 auto;
 }
 h4 {
-	font-size: 24px;
-	text-align: center;
-	margin: 0 auto;
-	padding-bottom: 20px;
+    font-size: 24px;
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: 20px;
 }
 p {
-	font-size: 20px;
-	margin: 16px 0;
-	font-weight: 300;
-	line-height: 33px;
+    font-size: 20px;
+    margin: 16px 0;
+    font-weight: 300;
+    line-height: 33px;
 }
 a {
-	text-decoration: none;
-	color: grey;
-  	cursor: pointer;
+    text-decoration: none;
+    color: grey;
+    cursor: pointer;
 }
 a:hover {
-	color: #EE1133;
+    color: #EE1133;
 }
 a:active {
-	color: #EE1133;
-	font-style: bold;
+    color: #EE1133;
+    font-style: bold;
 }
 ol {
-	padding-left: 50px;
+    padding-left: 50px;
 }
 ul {
   width: 90%;
@@ -65,72 +65,72 @@ ul li {
   display: inline-block;
 }
 header {
-	padding: 10px 0 20px 0;
+    padding: 10px 0 20px 0;
 }
 pre {
-	font-size: 16px;
+    font-size: 16px;
 }
 .tagline, .blog, .courses-current, .courses-completed, .skills, .dev-blog, .blog-list, .blog-title, .course-list {
-	width: 800px;
-	margin: 0 auto 40px auto;
-	padding-bottom: 20px;
-	border-bottom: 1px solid #555555;
-	font-weight: normal;
+    width: 800px;
+    margin: 0 auto 40px auto;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #555555;
+    font-weight: normal;
 }
 .tagline-text {
-	font-weight: 200;
-	font-style: normal;
+    font-weight: 200;
+    font-style: normal;
 
 }
 .skills, .course-list {
-	border-bottom: none;
+    border-bottom: none;
 }
 .navigation {
-	width: 800px;
-	margin: 0 auto;
-	text-align: center;
-	padding: 20px 0 30px 0;
+    width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px 0 30px 0;
 }
 .navigation a {
-	padding: 20px;
+    padding: 20px;
 }
 .blog img {
-	max-width: 400px;
-	margin: 0px 0 40px;
-	padding-right: 30px;
+    max-width: 400px;
+    margin: 0px 0 40px;
+    padding-right: 30px;
 }
 .blog-text {
-	padding-top: 20px;
+    padding-top: 20px;
 }
 .blog a {
-	padding: 0;
+    padding: 0;
 }
 .blog h3 {
-	padding-bottom: 10px;
+    padding-bottom: 10px;
 }
 /*article:last-child {
-	padding-bottom: 0px;
-	margin-bottom: 0px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
 }*/
 .course h3{
-	padding-bottom: 10px
+    padding-bottom: 10px
 }
 .course-summary {
-	font-size: 20px;
-	margin: 0;
-	padding-bottom: 30px;
+    font-size: 20px;
+    margin: 0;
+    padding-bottom: 30px;
 }
 .skills li{
-	font-weight: bold;
-	background-color: #444444;
-	color: #cccccc;
-	display: inline;
-	padding: 8px;
+    font-weight: bold;
+    background-color: #444444;
+    color: #cccccc;
+    display: inline;
+    padding: 8px;
 }
 .footer {
-	background-color: #CCCCCC;
-	text-align: center;
-	padding: 10px 0;
+    background-color: #CCCCCC;
+    text-align: center;
+    padding: 10px 0;
 }
 /**
 *
@@ -140,37 +140,37 @@ Posts
 *
 **/
 #post {
-	width: 800px;
-	margin: 0 auto 20px auto;
-	padding-bottom: 4px;
+    width: 800px;
+    margin: 0 auto 20px auto;
+    padding-bottom: 4px;
 }
 .posts li {
-	padding-bottom: 20px;
+    padding-bottom: 20px;
 }
 #post p {
-	line-height: 35px;
+    line-height: 35px;
 }
 .post-block, .post-first {
-	margin-bottom: 40px;
-	padding-left: 20px;
-	padding-right: 20px;
-	background-color: #EEEEEE;
+    margin-bottom: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #EEEEEE;
 }
 .blog-text {
-	display: inline-block;
+    display: inline-block;
 }
 .excerpt_only {
-	float: left;
+    float: left;
 }
 .next-previous-top, .next-previous-bottom {
-	text-align: center;
+    text-align: center;
 }
 .next-previous-bottom {
-	padding-bottom: 30px;
+    padding-bottom: 30px;
 }
 .previous {
-	padding-right: 10px;
+    padding-right: 10px;
 }
 .next {
-	padding-left: 10px;
+    padding-left: 10px;
 }
