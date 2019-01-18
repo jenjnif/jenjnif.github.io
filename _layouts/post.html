@@ -4,27 +4,27 @@ layout: default
 
 
 <div id="post">
-<div class="blog-header">
-<h2>{{ page.title }}</h2>
-</div>
+    <div class="blog-header">
+        <h2>{{ page.title }}</h2>
+    </div>
 
-<h2 class="blog-title">{{ post.title }}</h2>
+    <h2 class="blog-title">{{ post.title }}</h2>
 
-<div class="next-previous-top">
-{% if page.previous.url %}
-<a href="{{ page.previous.url }}" class="previous">&#60 Previous</a>
-{% endif %}
-{% if page.next.url %}
-<a href="{{ page.next.url }}" class="next">Next &#62</a>
-{% endif %}
-</div>
-{{ content }}
+    <div class="next-previous-top">
+        {% if page.previous.url %}
+        <a href="{{ page.previous.url }}" class="previous">&#60 Previous</a>
+        {% endif %}
+        {% if page.next.url %}
+        <a href="{{ page.next.url }}" class="next">Next &#62</a>
+        {% endif %}
+    </div>
+    {{ content }}
 </div>
 <div class="next-previous-bottom">
-{% if page.previous.url %}
-<a href="{{ page.previous.url }}" class="previous">&#60 Previous</a>
-{% endif %}
-{% if page.next.url %}
-<a href="{{ page.next.url }}" class="next">Next &#62</a>
-{% endif %}
+    {% if page.previous.url %}
+    <a href="{{ page.previous.url }}" class="previous">&#60 Previous</a>
+    {% endif %}
+    {% if page.next.url %}
+    <a href="{{ page.next.url }}" class="next">Next &#62</a>
+    {% endif %}
 </div>

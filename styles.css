@@ -61,7 +61,7 @@ ul {
   width: 90%;
   margin: 0 auto;
 }
-.navigation ul li {
+.navigation ul li{
   display: inline-block;
 }
 header {
@@ -161,6 +161,7 @@ Posts
     padding-bottom: 4px;
 }
 .posts li {
+    display: inline-block;
     padding-bottom: 20px;
 }
 #post p {
