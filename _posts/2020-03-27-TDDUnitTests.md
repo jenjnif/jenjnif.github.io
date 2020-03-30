@@ -21,7 +21,7 @@ The difference between functional and unit tests can get a bit blurred. In his b
 
 This book takes the approach of creating a failing functional test first, then writing and running failing unit tests for small parts of this functionalty before writing code to pass the unit tests. After this, run the functional test again, add any additional code needed before again, writing more failing unit tests and so on.
 
-I don't want to go into too much detail from the book as I might as well just be re-writing it. So, as mentioned in my first blog on <a href="/2018/08/08/TestDrivenDevelopment.html">TDD,</a> I am mainly going to focus on the changes I found with different version of Django. This is the first one:
+I don't want to go into too much detail from the book as I might as well just be re-writing it. So, as mentioned in my first blog on <a href="/2018/08/08/TestDrivenDevelopment.html">TDD,</a> I am mainly going to focus on the changes I found when using the latest version of Django. This is the first one:
 
 <br>
 
