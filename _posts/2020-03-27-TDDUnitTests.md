@@ -4,7 +4,7 @@ title: Test Driven Development - Unit Tests
 excerpt_separator: <!--more-->
 ---
 
-**Some time ago I was working through 'Test-Driven Development with Python' by Harry Percival with the intention of writing up how I got on as I went. As often happens work and life got in the way of writing so some time later I am recommencing my quest.**
+**Some time ago I was working through 'Test-Driven Development with Python' by Harry Percival with the intention of writing up how I got on as I went. As often happens, work and life got in the way of writing, so sometime later I am recommencing my quest.**
 
 <p align="center"><img src="/images/tdd_unit_tests/warning.JPG"
      alt="Photo from Chapter 3 of the book" width="60%" /></p>
@@ -17,17 +17,17 @@ After having created a failing first minimum viable functional test for a to-do 
 
 ### Functional Tests and Unit Tests
 
-According to the book the difference between functional and unit tests is that functional tests test the application from the point of view of the user whereas unit tests test from the inside, from the point of view of the programmer.
+The difference between functional and unit tests can get a bit blurred. In his book, Harry Percival defines the difference as functional tests, test the application from the point of view of the user, whereas unit tests test from the inside, from the point of view of the programmer. For example, a functional test might test what happens when a user clicks 'buy item x' on an online shop. This might involve testing many methods and other dependencies such as databases, web servers, etc. Unit tests, on the other hand, will test individual units, such as the methods that make up all the code tested in the functional test. In this way, there might be many unit tests testing the code for one functional test.
 
-This book takes the approach of creating a failing functional test first, then creating unit tests before writing code to pass them, then run and add to the functional tests again before writing more unit tests and so on.
+This book takes the approach of creating a failing functional test first, then writing and running failing unit tests for small parts of this functionalty before writing code to pass the unit tests. After this, run the functional test again, add any additional code needed before again, writing more failing unit tests and so on.
 
-I don't want to go into too much detail from the book as I might as well just be re-writing it so I am just going to cover some of the key points that I found useful whilst going through it and this is the first one:
+I don't want to go into too much detail from the book as I might as well just be re-writing it. So, as mentioned in my first blog on <a href="/2018/08/08/TestDrivenDevelopment.html">TDD,</a> I am mainly going to focus on the changes I found with different version of Django. This is the first one:
 
 <br>
 
-### Key point:
+### The module django.core.urlresolvers is no more!
 
-This first unit test and failure should be a simple example of the aim; to write a test that fails in the way we expected. But sometimes there are unexpected failures like this one:
+So, I am at the point where I am writing the first unit test which should be a simple example of the aim; to write a test that fails in an expected way before writing code to pass it. But sometimes there are unexpected failures like this one:
 
 <figure class="image" align="center">
   <img src="/images/tdd_unit_tests/unexpected_fail_annotated.png" alt="code and terminal output of an unexpected fail" width="100%">
@@ -36,7 +36,24 @@ This first unit test and failure should be a simple example of the aim; to write
 
 <br>
 
-When writing the first unit test for the to-do app the first line imports resolve from django.core.urlresolvers. This module has now been removed from Django and its functionality moved to django.urls so this line needs to be replaced with:
+This is one of the reasons why tests are so great. The first line of the unit test imports resolve from django.core.urlresolvers but the test error is clearly showing that this module is not found:
+
+    ModuleNotFoundError: No module named ‘django.core.urlresolvers’
+
+<br>
+
+With a quick search on the <a href="https://docs.djangoproject.com/en/3.0/releases/2.0/">Django documentation</a> I find that this module was removed in Django 2.0 and its functionality moved to django.urls.
+
+<br>
+
+<figure class="image" align="center">
+  <img src="/images/tdd_unit_tests/no_such_module.png" alt="Django documentation showing that django.core.urlresolvers was removed in Django version 2.0" width="100%">
+  <figcaption>Django documentation showing that django.core.urlresolvers was removed in Django version 2.0</figcaption>
+</figure>
+
+<br>
+
+So this line needs to be replaced with:
 
     from django.urls import resolve
 
