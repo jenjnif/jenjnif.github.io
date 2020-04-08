@@ -100,17 +100,24 @@ pre {
 /**
 *
 *
-NEWSLETTER NAV LINK
+LINKS
 *
 *
 **/
-#newsletter-link {
-    margin: 15px;
-    padding: 15px;
+#newsletter-link, #resourses-link{
     border: 1px solid #555555;
     border-radius: 5px;
     background: #20d47a;
     color: #ffff;
+}
+/** COMPLETED COURSES LINK **/
+#resourses-link{
+    padding: 15px;
+}
+/** NEWSLETTER NAV LINK **/
+#newsletter-link{
+    margin: 15px;
+    padding: 15px;
 }
 #newsletter-link:hover {
     color: #0b8c4c;
@@ -121,7 +128,7 @@ NEWSLETTER NAV LINK
 /**
 *
 *
-END - NEWSLETTER NAV LINK
+END - LINKS
 *
 *
 **/
@@ -148,13 +155,18 @@ USEFUL RESOURCES / COURSES ETC
 *
 *
 **/
-.useful-resources, .courses-current, .courses-completed{
+.online-resources, .book-resources, .courses-current, .courses-completed{
     margin: 20px 0 50px 0;
-    padding: 10px 20px
+    padding: 10px 20px;
+    background: #edfff6;
 }
-/** RESOURCES **/
-.useful-resources{
-    background: #e6fff2;
+/** ONLINE RESOURCES **/
+.online-resources{
+/*    background: #edfff6;*/
+}
+/** BOOK RESOURCES **/
+.book-resources{
+/*    background: #edfff6;*/
 }
 /** CURRENT AND COMPLETED COURSES **/
 .courses-current, .courses-completed{
@@ -168,7 +180,7 @@ END - USEFUL RESOURCES / COURSES ETC
 *
 **/
 
-.course h3{
+.resource h3{
     font-size: 20px;
     padding-bottom: 10px
 }
@@ -208,7 +220,7 @@ END - USEFUL RESOURCES / COURSES ETC
 /**
 *
 *
-Posts
+POSTS
 *
 *
 **/
@@ -248,3 +260,10 @@ Posts
 .next {
     padding-left: 10px;
 }
+/**
+*
+*
+END - POSTS
+*
+*
+**/
