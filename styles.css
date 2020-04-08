@@ -31,8 +31,8 @@ h3 {
     margin: 0 auto;
 }
 h4 {
-    font-size: 24px;
-    text-align: center;
+    font-size: 20px;
+/*    text-align: center;*/
     margin: 0 auto;
     padding-bottom: 20px;
 }
@@ -48,7 +48,7 @@ a {
     cursor: pointer;
 }
 a:hover {
-    color: #ad115c;
+    color: #0b8c4c;
 }
 a:active {
     color: #EE1133;
@@ -70,12 +70,14 @@ header {
 pre {
     font-size: 16px;
 }
-.tagline, .blog, .courses-current, .courses-completed, .skills, .dev-blog, .blog-list, .blog-title, .course-list, .cv-current {
+.tagline, .blog, .resources-header, .skills, .dev-blog, .blog-list,
+.blog-title, .course-list, .cv-current{
     width: 800px;
     margin: 0 auto 40px auto;
-    padding-bottom: 20px;
-    border-bottom: 1px solid #555555;
     font-weight: normal;
+}
+.resources-header h2{
+    font-size: 25px;
 }
 .tagline-text {
     font-weight: 200;
@@ -94,10 +96,11 @@ pre {
 .navigation a {
     padding: 20px;
 }
+
 /**
 *
 *
-Newsletter nav link
+NEWSLETTER NAV LINK
 *
 *
 **/
@@ -110,7 +113,7 @@ Newsletter nav link
     color: #ffff;
 }
 #newsletter-link:hover {
-    color: #ad115c;
+    color: #0b8c4c;
 }
 #mc_embed_signup .button {
     background: #20d47a;
@@ -118,7 +121,7 @@ Newsletter nav link
 /**
 *
 *
-END Newsletter nav link
+END - NEWSLETTER NAV LINK
 *
 *
 **/
@@ -137,18 +140,43 @@ END Newsletter nav link
 .blog h3 {
     padding-bottom: 10px;
 }
-/*article:last-child {
-    padding-bottom: 0px;
-    margin-bottom: 0px;
-}*/
+
+/**
+*
+*
+USEFUL RESOURCES / COURSES ETC
+*
+*
+**/
+.useful-resources, .courses-current, .courses-completed{
+    margin: 20px 0 50px 0;
+    padding: 10px 20px
+}
+/** RESOURCES **/
+.useful-resources{
+    background: #e6fff2;
+}
+/** CURRENT AND COMPLETED COURSES **/
+.courses-current, .courses-completed{
+    /*background: #e6fff2;*/
+}
+/**
+*
+*
+END - USEFUL RESOURCES / COURSES ETC
+*
+*
+**/
+
 .course h3{
+    font-size: 20px;
     padding-bottom: 10px
 }
 .cv-section h3{
     padding-bottom: 10px
 }
 .course-summary {
-    font-size: 20px;
+    font-size: 17px;
     margin: 0;
     padding-bottom: 30px;
 }
