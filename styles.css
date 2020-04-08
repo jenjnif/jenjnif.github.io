@@ -48,7 +48,7 @@ a {
     cursor: pointer;
 }
 a:hover {
-    color: #EE1133;
+    color: #ad115c;
 }
 a:active {
     color: #EE1133;
@@ -94,6 +94,35 @@ pre {
 .navigation a {
     padding: 20px;
 }
+/**
+*
+*
+Newsletter nav link
+*
+*
+**/
+#newsletter-link {
+    margin: 15px;
+    padding: 15px;
+    border: 1px solid #555555;
+    border-radius: 5px;
+    background: #20d47a;
+    color: #ffff;
+}
+#newsletter-link:hover {
+    color: #ad115c;
+}
+#mc_embed_signup .button {
+    background: #20d47a;
+}
+/**
+*
+*
+END Newsletter nav link
+*
+*
+**/
+
 .blog img {
     max-width: 400px;
     margin: 0px 0 40px;
