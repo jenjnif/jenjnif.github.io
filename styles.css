@@ -84,9 +84,6 @@ pre {
     font-style: normal;
 
 }
-.skills, .course-list {
-    border-bottom: none;
-}
 .navigation {
     width: 800px;
     margin: 0 auto;
@@ -155,7 +152,8 @@ USEFUL RESOURCES / COURSES ETC
 *
 *
 **/
-.online-resources, .book-resources, .courses-current, .courses-completed{
+.online-resources, .book-resources,
+.courses, .courses, .skills-current{
     margin: 20px 0 50px 0;
     padding: 10px 20px;
     background: #edfff6;
@@ -169,7 +167,7 @@ USEFUL RESOURCES / COURSES ETC
 /*    background: #edfff6;*/
 }
 /** CURRENT AND COMPLETED COURSES **/
-.courses-current, .courses-completed{
+.courses, .courses{
     /*background: #e6fff2;*/
 }
 /**
