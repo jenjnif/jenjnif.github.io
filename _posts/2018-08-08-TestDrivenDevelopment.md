@@ -9,7 +9,7 @@ excerpt_separator: <!--more-->
 <p align="center"><img src="/images/testing_one/goat.JPG"
      alt="A mountain goat in Canada" width="60%" /></p>
 
-As many programmers will have found before me, projects quickly become warrens. Fixing one thing illuminates further issues and breaks other parts of the code. Before you know it you are in a complicated web of despair. It quickly became clear how important test driven development (TDD) is, especially as projects grow and become more complex as my one has. 
+As many programmers will have found before me, projects quickly become warrens. Fixing one thing illuminates further issues and breaks other parts of the code. Before you know it you are in a complicated web of despair. It quickly became clear how important test-driven development (TDD) is, especially as projects grow and become more complex as my one has. 
 <!--more-->
 
 <br>
