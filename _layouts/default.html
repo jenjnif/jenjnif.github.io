@@ -2,6 +2,7 @@
 
 <!-- Mailchimp Signup Form styles -->
 <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style type="text/css">
   #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; width:100%;}
   /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
@@ -16,45 +17,48 @@
 </head>
 
 <body>
-    <header>
-      <h1>Jen Jones</h1>
-          <div id="nav">
-              <nav class="navigation">
-                  <ul>
-                    <!-- HOME PAGE -->
-                    {% if page.title == "Home Page" %}
-                    <li><a class="active" id="home-link" href="/">Home</a></li>
-                    {% else %}
-                    <li><a id="home-link" href="/">Home</a></li>
-                    {% endif %}
 
-                    <!-- GitHub -->
-                    {% if item.external_url == "https://github.com/jenjnif" %}
-                    <li><a class="active" href="https://github.com/jenjnif" target=”_blank”>My GitHub</a></li>
-                    {% else %}
-                    <li><a href="https://github.com/jenjnif" target=”_blank”>My GitHub</a></li>
-                    {% endif %}
+    <div class="row">
+        <div class="col-12">
+            <header>
+              <h1>Jen Jones</h1>
+                  <div id="nav">
+                      <nav class="navigation">
+                          <ul>
+                            <!-- HOME PAGE -->
+                            {% if page.title == "Home Page" %}
+                            <li><a class="active" id="home-link" href="/">Home</a></li>
+                            {% else %}
+                            <li><a id="home-link" href="/">Home</a></li>
+                            {% endif %}
 
-                    <!-- RESOURCES -->
-                    {% if page.title == "Resources" %}
-                    <li><a class="active" id="course-link" href="/resources.html">Resources</a></li>
-                    {% else %}
-                    <li><a id="course-link" href="/resources.html">Resources</a></li>
-                    {% endif %}
+                            <!-- GitHub -->
+                            {% if item.external_url == "https://github.com/jenjnif" %}
+                            <li><a class="active" href="https://github.com/jenjnif" target=”_blank”>My GitHub</a></li>
+                            {% else %}
+                            <li><a href="https://github.com/jenjnif" target=”_blank”>My GitHub</a></li>
+                            {% endif %}
 
-                    <!-- BLOG -->
-                    {% if page.title == "Development Blog" %}
-                    <li><a class="active" id="blog-link" href="/blog.html">Blog</a></li>
-                    {% else %}
-                    <li><a id="blog-link" href="/blog.html">Blog</a></li>
-                    {% endif %}
+                            <!-- RESOURCES -->
+                            {% if page.title == "Resources" %}
+                            <li><a class="active" id="course-link" href="/resources.html">Resources</a></li>
+                            {% else %}
+                            <li><a id="course-link" href="/resources.html">Resources</a></li>
+                            {% endif %}
 
-                    <!-- SUBSCRIBE BUTTON -->
-                    <li><a class="link" id="newsletter-link" href="http://eepurl.com/gZdApj">Subscribe</a></li>
-                  </ul>
-              </nav>
-          </div>
-    </header>
+                            <!-- BLOG -->
+                            {% if page.title == "Development Blog" %}
+                            <li><a class="active" id="blog-link" href="/blog.html">Blog</a></li>
+                            {% else %}
+                            <li><a id="blog-link" href="/blog.html">Blog</a></li>
+                            {% endif %}
+
+                            <!-- SUBSCRIBE BUTTON -->
+                            <li><a class="link" id="newsletter-link" href="http://eepurl.com/gZdApj">Subscribe</a></li>
+                          </ul>
+                      </nav>
+                  </div>
+            </header>
   
   {{ content }}
 
@@ -83,6 +87,7 @@
           <h3 class="contact">Jen Jones</h3>
           <a href="https://github.com/jenjnif" target="_blank">github.com/jenjnif</a>
     </div>
-
+    </div>
+</div>
 </body>
 </html>
