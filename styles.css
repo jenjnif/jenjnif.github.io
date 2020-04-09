@@ -6,7 +6,7 @@ Site wide
 *
 *
 **/
-html, body, h1, h2, h3, h4, p, div, ul, ol, li {
+html, body, h1, h2, h3, h4, p, div, ul, ol, li, button {
     padding: 0;
     border: 0;
     margin: 0;
@@ -50,19 +50,16 @@ a {
 a:hover {
     color: #0b8c4c;
 }
-a:active {
+/*a:active {
     color: #EE1133;
     font-style: bold;
-}
+}*/
 ol {
     padding-left: 50px;
 }
 ul {
   width: 90%;
   margin: 0 auto;
-}
-.navigation ul li{
-  display: inline-block;
 }
 header {
     padding: 10px 0 20px 0;
@@ -82,7 +79,17 @@ pre {
 .tagline-text {
     font-weight: 200;
     font-style: normal;
+}
 
+/**
+*
+*
+NAVIGATION
+*
+*
+**/
+.navigation ul li{
+  display: inline-block;
 }
 .navigation {
     width: 800px;
@@ -93,6 +100,26 @@ pre {
 .navigation a {
     padding: 20px;
 }
+.link {
+    border: none;
+/*    outline: none;
+    padding: 10px 16px;
+    background-color: #f1f1f1;
+    cursor: pointer;*/
+}
+.active, .link:hover {
+  color: #0b8c4c;
+}
+:focus{
+    outline: none;
+}
+/**
+*
+*
+END - NAVIGATION
+*
+*
+**/
 
 /**
 *
@@ -101,10 +128,12 @@ LINKS
 *
 *
 **/
-#newsletter-link, #resourses-link{
-    border: 1px solid #555555;
+#resourses-link{
+    border: 2px solid #20d47a;
     border-radius: 5px;
-    background: #20d47a;
+}
+#resourses-link:hover{
+    background-color: #20d47a;
     color: #ffff;
 }
 /** COMPLETED COURSES LINK **/
@@ -113,11 +142,14 @@ LINKS
 }
 /** NEWSLETTER NAV LINK **/
 #newsletter-link{
+    border-radius: 5px;
+    background: #20d47a;
+    color: #ffff;
     margin: 15px;
     padding: 15px;
 }
 #newsletter-link:hover {
-    color: #0b8c4c;
+    background-color: #777;
 }
 #mc_embed_signup .button {
     background: #20d47a;
