@@ -50,10 +50,10 @@ a {
 a:hover {
     color: #0b8c4c;
 }
-/*a:active {
-    color: #EE1133;
-    font-style: bold;
-}*/
+a.active {
+    color: #0b8c4c;
+    font-weight: 900;
+}
 ol {
     padding-left: 50px;
 }
@@ -99,19 +99,6 @@ NAVIGATION
 }
 .navigation a {
     padding: 20px;
-}
-.link {
-    border: none;
-/*    outline: none;
-    padding: 10px 16px;
-    background-color: #f1f1f1;
-    cursor: pointer;*/
-}
-.active, .link:hover {
-  color: #0b8c4c;
-}
-:focus{
-    outline: none;
 }
 /**
 *
