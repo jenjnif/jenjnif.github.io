@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 
 <!-- Mailchimp Signup Form styles -->
-<link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
 <style type="text/css">
   #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; width:100%;}
   /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
@@ -20,11 +20,12 @@
 
     <div class="row">
         <div class="col-12">
-            <header>
-              <h1>Jen Jones</h1>
-                  <div id="nav">
-                      <nav class="navigation">
-                          <ul>
+            <header class="header">
+                <h1><a href="/" class="logo">Jen Jones</a></h1>
+                <nav class="col-12">
+                <input class="menu-btn" type="checkbox" id="menu-btn" />
+                    <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+                        <ul class="menu">
                             <!-- HOME PAGE -->
                             {% if page.title == "Home Page" %}
                             <li><a class="active" id="home-link" href="/">Home</a></li>
@@ -55,10 +56,11 @@
 
                             <!-- SUBSCRIBE BUTTON -->
                             <li><a class="link" id="newsletter-link" href="http://eepurl.com/gZdApj">Subscribe</a></li>
-                          </ul>
-                      </nav>
-                  </div>
-            </header>
+                        </ul>
+            </nav>
+        </header>
+    </div>
+</div>
   
   {{ content }}
 
