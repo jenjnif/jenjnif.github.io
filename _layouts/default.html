@@ -33,13 +33,6 @@
                             <li><a id="home-link" href="/">Home</a></li>
                             {% endif %}
 
-                            <!-- GitHub -->
-                            {% if item.external_url == "https://github.com/jenjnif" %}
-                            <li><a class="active" href="https://github.com/jenjnif" target=”_blank”>My GitHub</a></li>
-                            {% else %}
-                            <li><a href="https://github.com/jenjnif" target=”_blank”>My GitHub</a></li>
-                            {% endif %}
-
                             <!-- RESOURCES -->
                             {% if page.title == "Resources" %}
                             <li><a class="active" id="course-link" href="/resources.html">Resources</a></li>
@@ -52,6 +45,13 @@
                             <li><a class="active" id="blog-link" href="/blog.html">Blog</a></li>
                             {% else %}
                             <li><a id="blog-link" href="/blog.html">Blog</a></li>
+                            {% endif %}
+
+                            <!-- GitHub -->
+                            {% if item.external_url == "https://github.com/jenjnif" %}
+                            <li><a class="active" href="https://github.com/jenjnif" target=”_blank”>My GitHub</a></li>
+                            {% else %}
+                            <li><a href="https://github.com/jenjnif" target=”_blank”>My GitHub</a></li>
                             {% endif %}
 
                             <!-- SUBSCRIBE BUTTON -->
