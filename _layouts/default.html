@@ -1,31 +1,31 @@
 <!DOCTYPE html>
 
-<!-- Mailchimp Signup Form styles -->
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
-<style type="text/css">
-  #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; width:100%;}
-  /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
-     We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
-</style>
-
 <head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-    <link rel="stylesheet" href="/styles.css">
-    <title>{{ page.title }}</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/styles.css">
+
 </head>
 
 <body>
 
-    <div class="row">
-        <div class="col-12">
-            <header class="header">
-                <h1><a href="/" class="logo">Jen Jones</a></h1>
-                <nav class="col-12">
-                <input class="menu-btn" type="checkbox" id="menu-btn" />
-                    <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
-                        <ul class="menu">
+<div class="default-grid">
+
+  <div class="logo-container">
+    <h1 class="logo">
+      <a id="home-link" href="/">Jen Jones
+      </a></li>
+    </h1>
+  </div>
+
+  <div class="menu-container">
+    <nav>
+      <input class="menu-btn" type="checkbox" id="menu-btn">
+      <label class="burger-menu" for="menu-btn"><span class="navicon"></span></label>
+      <div class="menu">
+          <ul>
                             <!-- HOME PAGE -->
                             {% if page.title == "Home Page" %}
                             <li><a class="active" id="home-link" href="/">Home</a></li>
@@ -57,39 +57,40 @@
                             <!-- SUBSCRIBE BUTTON -->
                             <li><a class="link" id="newsletter-link" href="http://eepurl.com/gZdApj">Subscribe</a></li>
                         </ul>
-            </nav>
-        </header>
-    </div>
-</div>
-  
+      </div>
+    </nav>
+  </div>
+
+<div class="content">
+
   {{ content }}
 
+</div>
 
-    <!-- Begin Mailchimp Signup Form -->
-    <div id="mc_embed_signup">
-        <form action="https://github.us19.list-manage.com/subscribe/post?u=cb2ad868255997ae939f06db7&amp;id=3e449df267" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-            <div id="mc_embed_signup_scroll">
-                <label for="mce-EMAIL">Subscribe to my email newsletter</label>
-                <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
-                  <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                  <div style="position: absolute; left: -5000px;" aria-hidden="true">
-                      <input type="text" name="b_cb2ad868255997ae939f06db7_3e449df267" tabindex="-1" value="">
-                  </div>
-                  <div class="clear">
-                      <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
-                  </div>
-            </div>
-        </form>
-    </div>
+<!-- Begin Mailchimp Signup Form -->
+<div id="mc_embed_signup">
+    <form action="https://github.us19.list-manage.com/subscribe/post?u=cb2ad868255997ae939f06db7&amp;id=3e449df267" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+        <div id="mc_embed_signup_scroll">
+            <label for="mce-EMAIL">Subscribe to my email newsletter</label>
+            <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+              <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+              <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                  <input type="text" name="b_cb2ad868255997ae939f06db7_3e449df267" tabindex="-1" value="">
+              </div>
+              <div class="clear">
+                  <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+              </div>
+        </div>
+    </form>
+</div>
 
-    <!--End mc_embed_signup-->
-
+<!--End mc_embed_signup-->
 
       <div class="footer">
           <h3 class="contact">Jen Jones</h3>
           <a href="https://github.com/jenjnif" target="_blank">github.com/jenjnif</a>
     </div>
-    </div>
+
 </div>
+
 </body>
-</html>

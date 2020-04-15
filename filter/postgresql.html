@@ -1,0 +1,17 @@
+---
+layout: home
+title: postgresql posts
+---
+
+{% for post in site.posts %}
+  {% if post.filter contains 'postgresql' %}
+  <div class="post-block">
+    <div class="blog-text">
+      <h3 class="title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
+      <article>{{ post.excerpt }}
+        <p class="read-more"><a href="{{ post.url }}">Click here to read more</a></p>
+      </article>
+    </div>
+  </div>
+  {% endif %}
+{% endfor %}

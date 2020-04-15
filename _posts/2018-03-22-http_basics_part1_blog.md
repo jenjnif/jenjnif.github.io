@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Creating a website contact page part 1 - basic HTTP requests
+filter: http
 excerpt_separator: <!--more-->
 excerpt_image: images/contact-form.png
 ---

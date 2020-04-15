@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Le Wagon API for beginners, Coding Workshop
+filter: events
 excerpt_separator: <!--more-->
 ---
 

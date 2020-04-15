@@ -3,25 +3,24 @@ layout: default
 title: Development Blog
 ---
 
-<div class="row">
-    <div class="col-1 col-s-1"></div>
-        <div class="col-10 col-s-10">
-            <div class="dev-blog">
-                <h2>Development and life blog</h2>
-            </div>
-            <div class="blog-list">
-                <ul class="posts">
-                {% for post in site.posts %}
-                  <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a>
-                  </li>
-                  <br>
-                {% endfor %}
-                </ul>
-            </div>
-        </div>
-    <div class="col-1 col-s-1"></div>
-</div>
+<div class="blog-list-container">
 
-<script>
-    document.getElementById('blog-link').style.fontWeight='bold';
-</script>
+  <div class="dev-blog-header">
+    <h2>Development and life blog</h2>
+  </div>
+
+  <div class="blog-list">
+    <ul class="posts">
+
+      {% for post in site.posts %}
+      <li><span>{{ post.date | date_to_string }} </span> &raquo; <a href="  {{ post.url }}"> {{ post.title }}</a>
+      </li>
+        
+      <br>
+        
+      {% endfor %}
+
+    </ul>
+  </div>
+
+</div>

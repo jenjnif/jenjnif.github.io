@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Alpine Club UK Introductory meet 8-10 June 2018
+filter: climbing
 excerpt_separator: <!--more-->
 ---
 

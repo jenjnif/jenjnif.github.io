@@ -1,14 +1,7 @@
-/*Main CSS for Jen Jones' site*/
-/**
-*
-*
-Site wide
-*
-*
-**/
-* {
-    box-sizing: border-box;
+*, *:before, *:after {
+  box-sizing: border-box;
 }
+
 html, body, h1, h2, h3, h4, p, div, ul, ol, li, button {
     padding: 0;
     border: 0;
@@ -17,369 +10,200 @@ html, body, h1, h2, h3, h4, p, div, ul, ol, li, button {
     font-size: 100%;
     font-family: "Raleway", "Helvetica Neue", Helvetica, sans-serif;
 }
-h1 {
-    font-size: 70px;
-    font-weight: bold;
-    text-align: center;
+
+h1, p {
+  font-size: 40px;
 }
+
 h2 {
     font-size: 30px;
     font-weight: 100;
     text-align: center;
     margin: 0 auto;
 }
+
 h3 {
-    font-size: 22px;
-    font-weight: 700;
+    font-size: 24px;
+    font-weight: 400;
     margin: 0 auto;
 }
+
 h4 {
     font-size: 20px;
-/*    text-align: center;*/
     margin: 0 auto;
     padding-bottom: 20px;
 }
+
 p {
+    margin: 1em 0;
     font-size: 20px;
-    margin: 16px 0;
     font-weight: 300;
     line-height: 33px;
 }
+
 a {
     text-decoration: none;
     color: grey;
     cursor: pointer;
 }
+
 a:hover {
     color: #0b8c4c;
 }
+
 a.active {
     color: #0b8c4c;
     font-weight: 900;
 }
+
 .logo, .logo:hover {
     color: #000;
 }
+
 ol {
     padding-left: 50px;
 }
+
 ul {
-  width: 90%;
   margin: 0 auto;
   list-style: none;
 }
+
 header {
     padding: 10px 0 20px 0;
 }
-/*body {
-    background-color: #f4f4f4;
-}*/
+
 pre {
     font-size: 16px;
 }
-.tagline, .blog, .resources-header, .skills-list, .dev-blog, .blog-list,
-.blog-title, .course-list, .cv-current{
-    margin: 0 auto 40px auto;
-    font-weight: normal;
+
+/*GRIDS*/
+
+/*default page*/
+.logo-container {
+  grid-area: logo;
+  align-self: center;
 }
-.resources-header h2{
-    font-size: 25px;
+
+.menu-container {
+  grid-area: nav;
+  align-self: center;
 }
+
+.content {
+  grid-area: insert;
+}
+
+#mc_embed_signup {
+  grid-area: mailchimp;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+.default-grid {
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    ' . logo . '
+    ' . nav . '
+    ' . insert . '
+    ' . mailchimp . '
+    ' footer footer footer ';
+}
+
+/* home page */
+.content {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+}
+
+.tagline {
+  grid-column: 1 / span 3;
+  grid-row: 1;
+  align-self: center;
+  margin: 10px 0 0 0;
+}
+
 .tagline-text {
-    padding: 0 10%;
     font-weight: 200;
     font-style: normal;
 }
 
-/**
-*
-*
-LINKS
-*
-*
-**/
-#resourses-link{
-    border: 2px solid #20d47a;
-    border-radius: 5px;
-}
-#resourses-link:hover{
-    background-color: #20d47a;
-    color: #ffff;
-}
-/** COMPLETED COURSES LINK **/
-#resourses-link{
-    padding: 15px;
-}
-/** NEWSLETTER NAV LINK **/
-#newsletter-link{
-    border-radius: 5px;
-    background: #20d47a;
-    color: #ffff;
-}
-#newsletter-link:hover {
-    background-color: #777;
-}
-#mc_embed_signup .button {
-    background: #20d47a;
-}
-/**
-*
-*
-END - LINKS
-*
-*
-**/
-
-.blog img {
-/*    max-width: 400px;*/
-    margin: 0px 0 40px;
-    padding-right: 30px;
-}
-.blog-text {
-    padding-top: 20px;
-}
-.blog a {
-    padding: 0;
-}
-.blog h3 {
-    padding-bottom: 10px;
+.skills-current {
+  grid-column: 1;
+  grid-row: 2;
 }
 
-/**
-*
-*
-USEFUL RESOURCES / COURSES ETC
-*
-*
-**/
-.online-resources, .book-resources,
-.courses, .courses, .skills-current{
-    margin: 20px 0 50px 0;
-    padding: 10px 20px;
-    background: #edfff6;
-}
-/** ONLINE RESOURCES **/
-.online-resources{
-/*    background: #edfff6;*/
-}
-/** BOOK RESOURCES **/
-.book-resources{
-/*    background: #edfff6;*/
-}
-/** CURRENT AND COMPLETED COURSES **/
-.courses, .courses{
-    /*background: #e6fff2;*/
-}
-.resource h3{
-    font-size: 20px;
-    padding-bottom: 10px
-}
-.course-summary {
-    font-size: 17px;
-    margin: 0;
-    padding-bottom: 30px;
-}
-/**
-*
-*
-END - USEFUL RESOURCES / COURSES ETC
-*
-*
-**/
-
-
-.skills-list {
-    text-align: center;
-}
-.skills-list li{
-    font-weight: bold;
-    background-color: #444444;
-    color: #cccccc;
-    display: inline;
-    padding: 8px;
-}
-.footer {
-    background-color: #CCCCCC;
-    text-align: center;
-    padding: 10px 0;
-}
-/**
-*
-*
-POSTS
-*
-*
-**/
-#post {
-    margin: 0 auto 20px auto;
-    padding-bottom: 4px;
-}
-.posts li {
-    display: inline-block;
-    padding-bottom: 20px;
-}
-#post p {
-    line-height: 35px;
-}
-.post-block, .post-first {
-    margin-bottom: 40px;
-    padding-left: 20px;
-    padding-right: 20px;
-    background-color: #EEEEEE;
-}
-.blog-text {
-    display: inline-block;
-}
-.excerpt_only {
-    float: left;
-}
-.next-previous-top, .next-previous-bottom {
-    text-align: center;
-}
-.next-previous-bottom {
-    padding-bottom: 30px;
-}
-.previous {
-    padding-right: 10px;
-}
-.next {
-    padding-left: 10px;
-}
-/**
-*
-*
-END - POSTS
-*
-*
-**/
-
-/**
-*
-*
-RESPONSIVE
-*
-*
-**/
-
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-[class*="col-"] {
-  float: left;
-  padding: 15px;
+.blog-excerpts {
+  grid-column: 2 / span 2;
+  grid-row: 2 / span 2;
 }
 
-/* For mobile phones: */
-[class*="col-"] {
-  width: 100%;
+
+/* resources page */
+.course-list {
+  grid-column: 1 / span 3;
 }
 
-@media only screen and (min-width: 600px) {
-  /* For tablets: */
-  .col-s-1 {width: 8.33%;}
-  .col-s-2 {width: 16.66%;}
-  .col-s-3 {width: 25%;}
-  .col-s-4 {width: 33.33%;}
-  .col-s-5 {width: 41.66%;}
-  .col-s-6 {width: 50%;}
-  .col-s-7 {width: 58.33%;}
-  .col-s-8 {width: 66.66%;}
-  .col-s-9 {width: 75%;}
-  .col-s-10 {width: 83.33%;}
-  .col-s-11 {width: 91.66%;}
-  .col-s-12 {width: 100%;}
-}
-@media only screen and (min-width: 768px) {
-  /* For desktop: */
-  .col-1 {width: 8.33%;}
-  .col-2 {width: 16.66%;}
-  .col-3 {width: 25%;}
-  .col-4 {width: 33.33%;}
-  .col-5 {width: 41.66%;}
-  .col-6 {width: 50%;}
-  .col-7 {width: 58.33%;}
-  .col-8 {width: 66.66%;}
-  .col-9 {width: 75%;}
-  .col-10 {width: 83.33%;}
-  .col-11 {width: 91.66%;}
-  .col-12 {width: 100%;}
-}
-/**
-*
-*
-END - RESPONSIVE
-*
-*
-**/
+/* blog list page */
+.blog-list-container {
+  grid-column: 1 / span 3;
 
-
-
-/* header */
-
-/*.header {
-  background-color: #fff;
-  box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
-  position: fixed;
-  width: 100%;
-  z-index: 3;
-}*/
-
-/**
-*
-*
-NAVIGATION
-*
-*
-**/
-.navigation ul li{
-  display: inline-block;
-}
-.navigation {
-    margin: 0 auto;
-    text-align: center;
-    padding: 20px 0 30px 0;
-}
-.navigation a {
-    padding: 20px;
-}
-/**
-*
-*
-END - NAVIGATION
-*
-*
-**/
-
-.header ul {
-    display: inline-block;
-    overflow: hidden;
-}
-.header li a {
-  display: block;
-  padding: 20px 20px;
-}
-.header .logo {
-  display: block;
-  padding: 10px 20px;
+  
 }
 
-/* menu */
-.menu {
-    margin-left: auto;
+.blog-list {
+  padding: 0 6em;
 }
+
+.post-page {
+  grid-column: 1 / span 3;
+}
+
+
+/* NAVIGATION */
+
 nav {
-    margin-left: auto;
+/*  max-width for huge screens*/
+  max-width: 1720px;
+  margin: 0 auto;
 }
-.header .menu {
-  clear: both;
-  max-height: 0;
-  transition: max-height .2s ease-out;
+
+nav ul {
+  display: flex;
+  justify-content: center;
 }
+
+nav li {
+  list-style: none;
+}
+
+nav a {
+  text-decoration: none;
+  padding: 1em;
+  color: #787878;
+  cursor: pointer;
+
+  transition: .3s all ease-in-out;
+}
+
+nav a:hover, nav a:focus {
+  color: black;
+}
+
+strong {
+  font-weight: 300;
+  color: black;
+}
+
+
+/* BURGER ICON */
 
 /* menu icon */
-.header .menu-icon {
+.burger-menu {
   cursor: pointer;
   display: inline-block;
   float: right;
@@ -387,7 +211,7 @@ nav {
   position: relative;
   user-select: none;
 }
-.header .menu-icon .navicon {
+.burger-menu .navicon {
   background: #333;
   display: block;
   height: 2px;
@@ -395,8 +219,8 @@ nav {
   transition: background .2s ease-out;
   width: 18px;
 }
-.header .menu-icon .navicon:before,
-.header .menu-icon .navicon:after {
+.burger-menu .navicon:before,
+.burger-menu .navicon:after {
   background: #333;
   content: '';
   display: block;
@@ -405,50 +229,331 @@ nav {
   transition: all .2s ease-out;
   width: 100%;
 }
-.header .menu-icon .navicon:before {
+.burger-menu .navicon:before {
   top: 5px;
 }
-.header .menu-icon .navicon:after {
+.burger-menu .navicon:after {
   top: -5px;
 }
 
 /* menu btn */
-.header .menu-btn {
+.menu-btn {
   display: none;
 }
-.header .menu-btn:checked ~ .menu {
+.menu-btn:checked ~ .menu {
   max-height: 450px;
 }
-.header .menu-btn:checked ~ .menu-icon .navicon {
+.menu-btn:checked ~ .burger-menu .navicon {
   background: transparent;
 }
-.header .menu-btn:checked ~ .menu-icon .navicon:before {
+.menu-btn:checked ~ .burger-menu .navicon:before {
   transform: rotate(-45deg);
 }
-.header .menu-btn:checked ~ .menu-icon .navicon:after {
+.menu-btn:checked ~ .burger-menu .navicon:after {
   transform: rotate(45deg);
 }
-.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
-.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+.menu-btn:checked ~ .burger-menu:not(.steps) .navicon:before,
+.menu-btn:checked ~ .burger-menu:not(.steps) .navicon:after {
   top: 0;
 }
+/* BURGER ICON END */
 
-/* 48em = 768px */
-@media (min-width: 48em) {
-  .header li {
-    float: left;
+
+
+/* LOGO */
+
+.logo {
+/*  display: grid;
+  grid-template-columns: 1fr;*/
+  display: flex;
+  justify-content: center;
+}
+
+ .logo a {
+  font-size: 50px;
+  padding: 20px 20px 10px 50px;
+  text-decoration: none;
+  font-family: "Courier New Bold", Courier, monospace;
+  text-shadow: 0.5px 0.5px rgb(102, 102, 153);
+ }
+
+
+/* LOGO ENDS */
+
+
+.menu {
+    /*grid-column: 2;*/
+    align-self: center;
+    margin: 10px 0 0 0;
+    padding: 30px;
   }
-  .header li a {
-    padding: 20px 30px;
+
+.menu a {
+    padding: 10px 10px;
+    margin-left: 15px;
+    font-size: 17px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
   }
-  .header .menu {
-    clear: none;
-    float: right;
-    max-height: none;
-  }
-  .header .menu-icon {
+
+label.burger-menu {
     display: none;
   }
+
+.burger-menu {
+    /*grid-column: 1;*/
+    align-self: center;
+    margin-left: 20px;
+  }
+
+
+/*NEWSLETTER LINK*/
+
+#newsletter-link {
+    border-radius: 5px;
+    background: rgb(32, 212, 122);
+    color: #ffff;
 }
+
+#newsletter-link:hover {
+    background-color: #777;
+}
+
+#mc_embed_signup .button {
+    background: #20d47a;
+}
+
+/* END NEWSLETTER LINK*/
+
+
+/*FOOTER LINK*/
+
+.footer {
+    background-color: #CCCCCC;
+    text-align: center;
+    padding: 30px 0;
+}
+
+/* END FOOTER LINK */
+
+
+
+/* HOME PAGE */
+
+.tagline, .blog, .resources-header, .dev-blog-header, .blog-list,
+.blog-title, .course-list, .cv-current{
+    margin: 0 auto 40px auto;
+    font-weight: normal;
+}
+
+.tagline, .course-summary, .dev-blog-header {
+  padding: 30px 0 0 0;
+}
+
+.blog img {
+/*    max-width: 400px;*/
+    margin: 0px 0 40px;
+    padding-right: 30px;
+}
+
+.blog-text {
+    padding-top: 20px;
+}
+
+.blog a {
+    padding: 0;
+}
+
+.blog h3 {
+    padding-bottom: 10px;
+    font-family: "Courier New Bold", Courier, monospace;
+    font-size: 30px;
+}
+
+
+/** USEFUL RESOURCES / COURSES ETC **/
+
+.resources-header h2{
+    font-size: 25px;
+}
+
+.online-resources, .book-resources,
+.courses, .courses {
+    margin: 20px 0 50px 0;
+    padding: 10px 20px;
+    background: #edfff6;
+}
+
+/** CURRENT AND COMPLETED COURSES **/
+
+.resource h3{
+    font-size: 20px;
+    padding-bottom: 10px
+}
+.course-summary {
+    font-size: 17px;
+    margin: 0;
+}
+
+/** END - USEFUL RESOURCES / COURSES ETC **/
+
+
+
+/* SINGLE POST PAGE */
+
+.post {
+    margin: 0 auto 20px auto;
+    padding-bottom: 4px;
+}
+
+.post p {
+    line-height: 35px;
+}
+
+
+/* POST LIST PAGE */
+
+.posts li {
+    display: inline-block;
+    padding-bottom: 20px;
+}
+
+article p {
+  font-size: 15px;
+}
+
+.post-block, .post-first {
+    margin-bottom: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: 2px solid #EEEEEE;
+    border-radius: 10px;
+    background-color: #EEEEEE;
+}
+
+.blog-text {
+    display: inline-block;
+}
+
+.read-more {
+}
+
+.excerpt_only {
+    float: left;
+}
+
+.next-previous-top, .next-previous-bottom {
+    text-align: center;
+}
+
+.next-previous-bottom {
+    padding-bottom: 30px;
+}
+
+.previous {
+    padding-right: 10px;
+}
+
+.next {
+    padding-left: 10px;
+}
+
+
+/* resources/blog more links */
+#resourses-link{
+    border: 2px solid #20d47a;
+    border-radius: 5px;
+    padding: 15px;
+}
+#resourses-link:hover{
+    background-color: #20d47a;
+    color: #ffff;
+}
+
+
+/* skills */
+.skills-current {
+  padding-top: 20px;
+  margin-right: 1em;
+  background-color: rgb(135, 240, 172);
+  border: 2px solid rgb(135, 240, 172);
+  border-radius: 10px;
+  }
+
+.skills-list {
+  text-align: center;
+}
+
+.skills-list li {
+  padding: 1em;
+}
+
+
+/*SMALL SCREEN CHANGES*/
+
+@media only screen and (max-width: 780px) {
+    label.burger-menu {
+      display: inline-block;
+    }
+
+    .menu {
+      display: none;
+    }
+
+    #menu-btn:checked ~ .menu, .menu ul{
+
+      display: grid;
+      grid-row: 2;
+    }
+
+    .menu li {
+      padding: 10px;
+      margin: 0;
+    }
+    .skills-current {
+      grid-column: 1 / span 3;
+      grid-row: 2;
+      margin-bottom: 2em;
+      margin-right: 0;
+    }
+    .blog-excerpts {
+      grid-column: 1 / span 3;
+      grid-row: 3 / span 2;
+    }
+  }
+
+/* END HOME PAGE */
+
+
+
+
+
+
+
+
+.container {
+  overflow: hidden;
+}
+
+.filterDiv {
+  
+  display: none; /* Hidden by default */
+}
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  margin: 2px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+
 
 

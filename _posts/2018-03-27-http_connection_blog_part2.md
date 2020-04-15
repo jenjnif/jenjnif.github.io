@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Creating a website contact page part 2 - simple HTTP request example
+filter: http
 excerpt_separator: <!--more-->
 excerpt_image: images/4-http/http-diagram-annotated.JPG
 ---

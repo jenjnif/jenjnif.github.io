@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Databases - basic building blocks
+filter: databases docker postgresql
 excerpt_separator: <!--more-->
 ---
 
