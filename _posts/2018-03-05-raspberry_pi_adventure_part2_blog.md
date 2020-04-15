@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Raspberry Pi adventure day part 2 - creating & transferring my site
-filter: raspberry pi jekyll
+filter: raspberry pi jekyll html css
 excerpt_separator: <!--more-->
 ---
 

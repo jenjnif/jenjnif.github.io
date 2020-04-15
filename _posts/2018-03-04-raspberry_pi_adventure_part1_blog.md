@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Raspberry Pi adventure day part 1 - setting up
-filter: raspberry pi
+filter: raspberry pi html css
 excerpt_separator: <!--more-->
 ---
 

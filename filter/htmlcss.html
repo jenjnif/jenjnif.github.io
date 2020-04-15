@@ -4,7 +4,7 @@ title: html css posts
 ---
 
 {% for post in site.posts %}
-  {% if post.filter contains 'html' or 'css' %}
+  {% if post.filter contains 'html' or post.filter contains 'css' %}
   <div class="post-block">
     <div class="blog-text">
       <h3 class="title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
